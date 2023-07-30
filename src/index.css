@@ -1,34 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Play:wght@700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800&display=swap');
 
-:root {
-  --primary-dark: #5651e5;
-  --primary-light: #709dff;
+
+.link {
+    @apply p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer cursor-default duration-300 font-medium;
 }
 
-@layer base {
-  html {
-    @apply scroll-smooth
+.active {
+    @apply bg-cyan-300 text-gray-600;
   }
 
-  body {
-    @apply font-[Poppins]
+  .subactive {
+    @apply bg-white text-gray-600;
   }
-
-  li {
-    @apply p-4 text-sm
-  }
-
-  button {
-    @apply px-4 py-2 border bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white
-  }
-
-  h2 {
-    @apply text-xl font-bold
-  }
-}
