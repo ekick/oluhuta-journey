@@ -19,7 +19,7 @@ const Destinasi = () => {
               <NavLink to={"/Beranda"}>
                 <BiArrowBack size={35} style={{ color: 'white' }} className='mr-4 ml-2 text-[var(--primary-dark)]' />
               </NavLink>
-              <h1 className='font-cde md:text-4xl text-xl font-bold text-white'>Destinasi</h1>
+              <h1 className='font-cde md:text-4xl text-xl font-bold text-white'>ORI</h1>
           </div>
       </div>
       <div>

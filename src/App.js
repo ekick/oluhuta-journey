@@ -1,26 +1,16 @@
 import react from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-// import About from './components/About';
-// import SplashScreen from "./components/SplashScreen";
-// import TopBar from "./components/TopBar";
-// import NavBar from "./components/NavBar";
-// import Hero from "./components/Hero";
-import Activities from "./components/Activities";
-// import Booking from "./components/Booking";
-// import Contact from "./components/Contact";
-// import Footer from "./components/Footer";
-//
-import Layout from "./pages/wisata/Layout";
+import LayoutWisata from "./pages/wisata/LayoutWisata";
 import Budaya from "./pages/wisata/Budaya";
 import Home from "./pages/wisata/Home";
 import SpotWisata from "./pages/wisata/SpotWisata";
-import Umkm from "./pages/wisata/Umkm";
+import UmkmWisata from "./pages/wisata/UmkmWisata";
 import Gallery from "./pages/wisata/Gallery";
 import Scan from "./pages/wisata/Scan";
 import Beranda from "./pages/wisata/Beranda";
 import Destinasi from "./pages/wisata/Destinasi";
-import Biodiversity from "./pages/wisata/Biodiversity";
-import Culturaldiversity from "./pages/wisata/Culturaldiversity";
+import BiodiversityWisata from "./pages/wisata/BiodiversityWisata";
+import CulturaldiversityWisata from "./pages/wisata/CulturaldiversityWisata";
 import Geodiversity from "./pages/wisata/Geodiversity";
 import MiniMap from "./pages/wisata/MiniMap";
 import SyaratDanKetentuan from "./pages/wisata/SyaratDanKetentuan";
@@ -36,12 +26,12 @@ import Minuman from "./pages/wisata/Kuliner/Minuman";
 const App = () => {
   return (
     <BrowserRouter>
-      <Layout>
+      <LayoutWisata>
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/Beranda" element={<Beranda />}/>
-          <Route path="/Biodiversity" element={<Biodiversity />}/>
-          <Route path="/Culturaldiversity" element={<Culturaldiversity />}/>
+          <Route path="/Biodiversity" element={<BiodiversityWisata />}/>
+          <Route path="/Culturaldiversity" element={<CulturaldiversityWisata />}/>
           <Route path="/Geodiversity" element={<Geodiversity />}/>
           <Route path="/Geodiversity/KekarBerkolom" element={<KekarBerkolom />}/>
           <Route path="/MiniMap" element={<MiniMap />}/>
@@ -55,12 +45,10 @@ const App = () => {
           <Route path="/Scan" element={<Scan />}/>
           <Route path="/SpotWisata" element={<SpotWisata />}/>
           <Route path="/Budaya" element={<Budaya />}/>
-          <Route path="/Umkm" element={<Umkm />}/>
+          <Route path="/Umkm" element={<UmkmWisata />}/>
           <Route path="/Gallery" element={<Gallery />}/>
-          <Route path="/Activies" element={<Activities />}/>
-          
         </Routes>
-      </Layout>
+      </LayoutWisata>
     </BrowserRouter>
   );
 };
