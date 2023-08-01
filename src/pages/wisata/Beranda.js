@@ -17,12 +17,7 @@ import logo from '../../assets/Logo.png'
 import '../../index.css'
 import './Beranda.css';
 import { NavLink } from "react-router-dom";
-import {
-        FaFacebookF,
-        FaTwitter,
-        FaGooglePlusG,
-        FaInstagram,
-            } from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaGooglePlusG, FaInstagram } from 'react-icons/fa'
 
 const Beranda = () => {
     const navButton = [
@@ -45,7 +40,7 @@ const Beranda = () => {
     return (
         <div>
             <div>
-                <img className='w-screen md:h-96 h-60 rounded-b-2xl' src={backhome} alt='/' />
+                <img className='max-h-96 w-full rounded-b-2xl'  src={backhome} alt='/' />
                 <div className='w-screen h-screen absolute top-0 flex flex-col'>
                     <div>
                         <div className='flex justify-between w-fit p-3'>

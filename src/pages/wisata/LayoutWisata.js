@@ -5,7 +5,7 @@ import Navbar from "../../components/wisata/Navbar"
 import { useLocation } from "react-router-dom";
 
 
-const Layout = ({ children }) => {
+const LayoutWisata = ({ children }) => {
   const location = useLocation().pathname;
 
   // console.log(location);
@@ -55,4 +55,4 @@ const Layout = ({ children }) => {
   
 }
 
-export default Layout
+export default LayoutWisata

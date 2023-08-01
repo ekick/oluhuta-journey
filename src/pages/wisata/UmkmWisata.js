@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Umkm = () => {
+const UmkmWisata = () => {
   return (
     <div>
       Umkm
@@ -8,4 +8,4 @@ const Umkm = () => {
   )
 }
 
-export default Umkm
+export default UmkmWisata

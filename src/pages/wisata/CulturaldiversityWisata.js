@@ -4,7 +4,7 @@ import budayamembuatperahu from '../../assets/Budaya Membuat Perahu1.jpg'
 import situsmanusiaoluhuta from '../../assets/Situs Manusia Oluhuta1.png'
 import { NavLink } from "react-router-dom";
 
-const Culturaldiversity = () => {
+const CulturaldiversityWisata= () => {
     const ListCulturaldiversity = [
         {id: 1, title: 'Perahu Tradisional', path: '/Culturaldiversity/PerahuTradisional', image: budayamembuatperahu},
         {id: 2, title: 'Situs Manusia Oluhuta', path: '/Culturaldiversity/SitusManusiaOluhuta', image: situsmanusiaoluhuta},
@@ -47,4 +47,4 @@ const Culturaldiversity = () => {
     )
 }
 
-export default Culturaldiversity
+export default CulturaldiversityWisata

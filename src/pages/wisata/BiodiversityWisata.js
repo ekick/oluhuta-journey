@@ -5,7 +5,7 @@ import terumbukarang1 from '../../assets/Terumbu Karang1.jpg'
 import {BiArrowBack} from 'react-icons/bi'
 import { NavLink } from "react-router-dom";
 
-const Biodiversity = () => {
+const BiodiversityWisata = () => {
    const ListBiodiversity = [
       {id: 1, title: 'Ikan Karang', path: '/Biodiversity/IkanKarang', image: ikankarng1},
       {id: 2, title: 'Pohon Stigi', path: '/Biodiversity/PohonStigi', image: pohonstigi1},
@@ -49,4 +49,4 @@ const Biodiversity = () => {
    )
 }
 
-export default Biodiversity
+export default BiodiversityWisata

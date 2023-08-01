@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
     const navButton = [
         {id: 1, title: 'Beranda', path: '/Beranda', image: iconhome},
-        {id: 2, title: 'Destinasi', path: '/Destinasi', image: icondestinasi},
+        {id: 2, title: 'ORI', path: '/Destinasi', image: icondestinasi},
         {id: 3, title: 'Scan', path: '/Scan', image: iconscan},
         {id: 4, title: 'Profil', path: '/Profil', image: iconprofil},
     ]
