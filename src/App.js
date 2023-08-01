@@ -1,5 +1,6 @@
-import react from "react";
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Outlet } from 'react-router-dom';
+
+// wisata pages import
 import LayoutWisata from "./pages/wisata/LayoutWisata";
 import Budaya from "./pages/wisata/Budaya";
 import Home from "./pages/wisata/Home";
@@ -18,12 +19,12 @@ import PemanduWisata from "./pages/wisata/PemanduWisata";
 import Kuliner from "./pages/wisata/Kuliner"
 import Penyewaan from "./pages/wisata/Penyewaan";
 import KekarBerkolom from "./pages/wisata/Geodiversity/KekarBerkolom";
-import KekarBerlembar from "./pages/wisata/Geodiversity/KekarBerlembar";
+// import KekarBerlembar from "./pages/wisata/Geodiversity/KekarBerlembar";
 import Makanan from "./pages/wisata/Kuliner/Makanan";
 import Minuman from "./pages/wisata/Kuliner/Minuman";
+
+// dashboard pages import
 import Geologi from "./pages/dashboard/Geologi";
-import { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Laporan from "./pages/dashboard/Laporan";
 import Profile from "./pages/dashboard/Profile";
 import Toko from "./pages/dashboard/Toko";
@@ -37,62 +38,59 @@ import BiodiversityDashboard from "./pages/dashboard/BiodiversityDashboard";
 import UmkmDashboard from "./pages/dashboard/UmkmDashboard";
 import LayoutDashboard from "./pages/dashboard/LayoutDashboard";
 
+const WisataLayout = () => (
+  <LayoutWisata>
+    <Outlet />
+  </LayoutWisata>
+);
+
+const AdminLayout = () => (
+  <LayoutDashboard>
+    <Outlet />
+  </LayoutDashboard>
+);
+
 const App = () => {
   return (
-
-          
     <BrowserRouter>
-      <LayoutWisata>
         <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/Beranda" element={<Beranda />}/>
-          <Route path="/Biodiversity" element={<BiodiversityWisata />}/>
-          <Route path="/Culturaldiversity" element={<CulturaldiversityWisata />}/>
-          <Route path="/Geodiversity" element={<Geodiversity />}/>
-          <Route path="/Geodiversity/KekarBerkolom" element={<KekarBerkolom />}/>
-          <Route path="/MiniMap" element={<MiniMap />}/>
-          <Route path="/Kuliner" element={<Kuliner />}/>
-          <Route path="/Kuliner/Makanan" element={<Makanan />}/>
-          <Route path="/Kuliner/Minuman" element={<Minuman />}/>
-          <Route path="/Penyewaan" element={<Penyewaan />}/>
-          <Route path="/SyaratDanKetentuan" element={<SyaratDanKetentuan />}/>
-          <Route path="/PemanduWisata" element={<PemanduWisata />}/>
-          <Route path="/Destinasi" element={<Destinasi />}/>
-          <Route path="/Scan" element={<Scan />}/>
-          <Route path="/SpotWisata" element={<SpotWisata />}/>
-          <Route path="/Budaya" element={<Budaya />}/>
-          <Route path="/Umkm" element={<UmkmWisata />}/>
-          <Route path="/Gallery" element={<Gallery />}/>
-        </Routes>
-      </LayoutWisata>
+          <Route element={<WisataLayout />} >
+            <Route path="/" element={<Home />}/>
+            <Route path="/Beranda" element={<Beranda />}/>
+            <Route path="/Biodiversity" element={<BiodiversityWisata />}/>
+            <Route path="/Culturaldiversity" element={<CulturaldiversityWisata />}/>
+            <Route path="/Geodiversity" element={<Geodiversity />}/>
+            <Route path="/Geodiversity/KekarBerkolom" element={<KekarBerkolom />}/>
+            <Route path="/MiniMap" element={<MiniMap />}/>
+            <Route path="/Kuliner" element={<Kuliner />}/>
+            <Route path="/Kuliner/Makanan" element={<Makanan />}/>
+            <Route path="/Kuliner/Minuman" element={<Minuman />}/>
+            <Route path="/Penyewaan" element={<Penyewaan />}/>
+            <Route path="/SyaratDanKetentuan" element={<SyaratDanKetentuan />}/>
+            <Route path="/PemanduWisata" element={<PemanduWisata />}/>
+            <Route path="/Destinasi" element={<Destinasi />}/>
+            <Route path="/Scan" element={<Scan />}/>
+            <Route path="/SpotWisata" element={<SpotWisata />}/>
+            <Route path="/Budaya" element={<Budaya />}/>
+            <Route path="/Umkm" element={<UmkmWisata />}/>
+            <Route path="/Gallery" element={<Gallery />}/>
+          </Route>
 
-      <LayoutDashboard>
-        <Routes>
-              <Route path="/"element={<CulturaldiversityDashboard/>}/>
-              <Route path="/pages/geologi"element={<Geologi/>}/>
-              <Route path="/pages/biodiversity"element={<BiodiversityDashboard/>}/>
-              <Route path="/pages/laporan"element={<Laporan/>}/>
-              <Route path="/pages/umkm"element={<UmkmDashboard/>}/>
-              <Route path="/pages/toko"element={<Toko/>}/>
-              <Route path="/pages/produk"element={<Produk/>}/>
-              <Route path="/pages/pemandu"element={<Pemandu/>}/>
-              <Route path="/pages/monitoring"element={<Monitoring/>}/>
-              <Route path="/pages/profile"element={<Profile/>}/>
+          <Route element={<AdminLayout />} >
+            <Route path="/pages/culturdiversity"element={<CulturaldiversityDashboard/>}/>
+            <Route path="/pages/geologi"element={<Geologi/>}/>
+            <Route path="/pages/biodiversity"element={<BiodiversityDashboard/>}/>
+            <Route path="/pages/laporan"element={<Laporan/>}/>
+            <Route path="/pages/umkm"element={<UmkmDashboard/>}/>
+            <Route path="/pages/toko"element={<Toko/>}/>
+            <Route path="/pages/produk"element={<Produk/>}/>
+            <Route path="/pages/pemandu"element={<Pemandu/>}/>
+            <Route path="/pages/monitoring"element={<Monitoring/>}/>
+            <Route path="/pages/profile"element={<Profile/>}/>
+          </Route>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/register" element={<Register/>}/>
         </Routes>
-      </LayoutDashboard>
-
-      {/* <Login>
-        <Routes>
-          <Route path="/login"element={<Login/>}/>
-          <Route path="/pages/register"element={<Register/>}/>
-        </Routes>
-      </Login> */}
-
-      {/* <Register>
-        <Routes>
-          <Route path="/pages/register"element={<Register/>}/>
-        </Routes>
-      </Register> */}
   
     </BrowserRouter>
   );

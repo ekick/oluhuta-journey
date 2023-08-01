@@ -84,13 +84,13 @@ const Sidebar = ({ setOpenSidebar, mediaScreen, openSidebar }) => {
                </div>
                   <ul className='whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1 font-medium overflow-x-hidden'>
                      <li>
-                        <NavLink to="/" className={"link mb-1"}>
+                        <NavLink to="/pages/culturdiversity" className={"link mb-1"}>
                            <GiIsland size={23} className='min-w-max'/>
                            Spot Wisata
                         </NavLink>
                         <ul className="pl-2">
                            <li>
-                              <NavLink to="/" className={"p-1.5 flex rounded-t-lg gap-6  items-center md:cursor-pointer cursor-default duration-300 font-medium subactive "}>
+                              <NavLink to="/pages/culturdiversity" className={"p-1.5 flex rounded-t-lg gap-6  items-center md:cursor-pointer cursor-default duration-300 font-medium subactive "}>
                                  <SiMobxstatetree size={23} className='min-w-max'/>
                                  Culturaldiversity
                               </NavLink>
