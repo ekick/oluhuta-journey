@@ -1,13 +1,30 @@
 import React, { useState } from 'react'
 import { BiArrowBack } from 'react-icons/bi';
 import { NavLink } from 'react-router-dom';
+import makanan from '../../../assets/makanan.png'
+
 
 const Makanan = () => {
 const [searchText, setSearchText] = useState('');
 const items = [
-    { id: 1, name: 'Item 1' },
-    { id: 2, name: 'Item 2' },
-    { id: 3, name: 'Item 3' },
+    {id: 1, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
+    {id: 2, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
+    {id: 3, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
+    {id: 4, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
+    {id: 5, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
+    {id: 6, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
+    {id: 7, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
+    {id: 8, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
+    {id: 9, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
+    {id: 10, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
+    {id: 11, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
+    {id: 12, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
+    {id: 13, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
+    {id: 14, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
+    {id: 15, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
+    {id: 16, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
+    {id: 17, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
+    {id: 18, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
 ];
 const Food = items.filter((item) =>
     item.name.toLowerCase().includes(searchText.toLowerCase())
@@ -37,13 +54,43 @@ return (
                     </div>
             </form>
         </div>
+<div className='p-5'>
+<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<a href="#">
+<img class="p-8 rounded-t-lg w-40 h-40" src={makanan} alt="product image" />
+</a>
+<div class="px-5 pb-5">
+<a href="#">
+<h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Pisang Goreng</h5>
+</a>
+
+<div class="flex items-center justify-between">
+<span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+<a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Detail</a>
+</div>
+</div>
+</div>
+</div>
         <div>
-            <ul>
-                {Food.map((item) => (
-                <li key={item.id}>{item.name}</li>
-                ))}
-            </ul>
+            <div className="md:grid grid-cols-3 mx-auto my-auto font-medium">
+            {Food.map((item) => {
+            return(
+            <div className='mt-1 ml-1 mb-1 mr-1'>
+            <div className="grid-rows-4 w-full inline-flex flex-col items-center justify-center px-5 border-gray-200 border-x bg-blue-700 bg-opacity-30 hover:bg-gray-50 dark:hover:bg-gray-800 group dark:border-gray-600 rounded-xl">            
+            <img src={item.image} alt="/" className='md:mt-5 mt-1 md:w-28 w-14 md:h-28 h-14 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-500' />
+            <div className='w-full h-full flex  items-center justify-center md:p-5 p-1'>
+            <p>{item.name}</p>
+            </div>
+            <div className='w-full h-full flex  items-center justify-center md:p-5 p-1'>
+            <p>{item.harga}</p>
+            </div>
+            </div>
+            </div>
+            )}
+            )}
+            </div>
         </div>
+
     </div>
     );
     };
