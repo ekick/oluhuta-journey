@@ -22,6 +22,8 @@ import KekarBerkolom from "./pages/wisata/Geodiversity/KekarBerkolom";
 // import KekarBerlembar from "./pages/wisata/Geodiversity/KekarBerlembar";
 import Makanan from "./pages/wisata/Kuliner/Makanan";
 import Minuman from "./pages/wisata/Kuliner/Minuman";
+import ProfileWisata from './pages/wisata/ProfileWisata';
+
 
 // dashboard pages import
 import Geologi from "./pages/dashboard/Geologi";
@@ -70,6 +72,7 @@ const App = () => {
             <Route path="/PemanduWisata" element={<PemanduWisata />}/>
             <Route path="/Destinasi" element={<Destinasi />}/>
             <Route path="/Scan" element={<Scan />}/>
+            <Route path="/ProfileWisata" element={<ProfileWisata/>}/>
             <Route path="/SpotWisata" element={<SpotWisata />}/>
             <Route path="/Budaya" element={<Budaya />}/>
             <Route path="/Umkm" element={<UmkmWisata />}/>

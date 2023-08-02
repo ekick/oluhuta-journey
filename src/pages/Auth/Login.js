@@ -21,11 +21,11 @@ const Login= () => {
           </div>
           <div className='flex justify-between text-gray-400 py-2'>
             <p className='text-white'>Lupa Password</p>
-            <a href="/pages/register" className="text-white">
+            <a href="./pages/register" className="text-white">
                 Registrasi
             </a>
           </div>
-          <button className='w-full my-5 py-2 bg-blue-500 text-white'>Masuk</button>
+          <button type='submit' className='w-full my-5 py-2 bg-blue-500 text-white'>Masuk</button>
         </form>
       </div>
 

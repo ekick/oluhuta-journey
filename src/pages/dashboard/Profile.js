@@ -1,4 +1,8 @@
 import React from 'react'
+import {BiSolidUserCircle} from 'react-icons/bi'
+import {RiLockPasswordLine} from 'react-icons/ri'
+import {AiTwotoneMail} from 'react-icons/ai'
+import {AiFillEdit} from 'react-icons/ai'
 
 const Profile = () => {
   return (
@@ -7,21 +11,37 @@ const Profile = () => {
         {/* <div class="p-4 rounded-lg mt-14"> */}
            <div className=" items-center justify-center rounded bg-gray-200 p-3">         
                     
-                <form>
+           <form>
+                    <div class="flex items-center mb-5">   
                     
-                        <div className='grid gap-6 mb-6 md:grid-cols-2'>
-                            <div>
-                                <label for="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Nama User</label>
-                                <input type="text" className=" text-m rounded-lg block w-full p-2.5 dark:bg-gray-300 dark:placeholder-gray dark:text-gray-700 dark:focus:ring-blue-500 dark:border-gray-600 dark:focus:border-blue-500" placeholder="Nama" required></input>
+                        <div class="relative w-full mr-5">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none bg-sky-400 p-2 rounded-l-lg ">
+                                <BiSolidUserCircle/>
                             </div>
-                            <div>
-                                <label for="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Email</label>
-                                <input type="text" className=" text-m rounded-lg block w-full p-2.5 dark:bg-gray-300 dark:placeholder-gray dark:text-gray-700 dark:focus:ring-blue-500 dark:border-gray-600 dark:focus:border-blue-500" placeholder="Email123@gmail.com" required></input>
-                            </div>
-                            <div>
-                                <button type="submit" className="text-white mt-3 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Log Out</button>
-                            </div>
+                            <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5   dark:placeholder-gray-400 dark:text-black " placeholder="Username" readOnly required/>
                         </div>
+
+                        <div class="relative w-full">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none bg-sky-400 p-2 rounded-l-lg ">
+                                <AiTwotoneMail/>
+                            </div>
+                            <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5   dark:placeholder-gray-400 dark:text-black " placeholder="Email@gmail.com" readOnly required/>
+                        </div>
+                        
+                    </div>
+                    <div class="flex items-center">   
+                    
+                        <div class="relative w-full">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none bg-sky-400 p-2 rounded-l-lg ">
+                            <RiLockPasswordLine/>
+                            </div>
+                            <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5   dark:placeholder-gray-400 dark:text-black " placeholder="Password" required/>
+                        </div>
+
+                        <button type="submit" class="p-2.5 ml-5 mr-5 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <AiFillEdit/>
+                        </button>
+                    </div>
                 </form>
 
             </div> 
