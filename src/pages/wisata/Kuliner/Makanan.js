@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BiArrowBack } from 'react-icons/bi';
+import HeaderDetail from '../../../components/wisata/HeaderDetail';
 import { NavLink } from 'react-router-dom';
 import makanan from '../../../assets/makanan.png'
 
@@ -32,15 +32,8 @@ const Food = items.filter((item) =>
 
 return (
     <div>
-        <div className='rounded-b-2xl flex w-full md:h-20 h-12 bg-gradient-to-r from-blue-400 via-blue-500 to-cyan-600'>
-            <div className='flex justify-center items-center p-2'>
-                <NavLink to={"/Kuliner"}>
-                    <BiArrowBack size={35} style={{ color: 'white' }} className='mr-4 ml-2 text-[var(--primary-dark)]' />
-                </NavLink>
-                <h1 className='font-cde md:text-4xl text-xl font-bold text-white'>Makanan</h1>
-            </div>
-        </div>
-        <div>
+        <HeaderDetail judul={'Makanan'} link={"/Kuliner"}/>
+        <div className='mt-3 px-5'>
             <form>   
                 <label for="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                     <div className="relative">
@@ -54,43 +47,38 @@ return (
                     </div>
             </form>
         </div>
-<div className='p-5'>
-<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-<a href="#">
-<img class="p-8 rounded-t-lg w-40 h-40" src={makanan} alt="product image" />
-</a>
-<div class="px-5 pb-5">
-<a href="#">
-<h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Pisang Goreng</h5>
-</a>
-
-<div class="flex items-center justify-between">
-<span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
-<a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Detail</a>
-</div>
-</div>
-</div>
-</div>
-        <div>
-            <div className="md:grid grid-cols-3 mx-auto my-auto font-medium">
+        <div className='mb-20 px-3'>
             {Food.map((item) => {
-            return(
-            <div className='mt-1 ml-1 mb-1 mr-1'>
-            <div className="grid-rows-4 w-full inline-flex flex-col items-center justify-center px-5 border-gray-200 border-x bg-blue-700 bg-opacity-30 hover:bg-gray-50 dark:hover:bg-gray-800 group dark:border-gray-600 rounded-xl">            
-            <img src={item.image} alt="/" className='md:mt-5 mt-1 md:w-28 w-14 md:h-28 h-14 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-500' />
-            <div className='w-full h-full flex  items-center justify-center md:p-5 p-1'>
-            <p>{item.name}</p>
-            </div>
-            <div className='w-full h-full flex  items-center justify-center md:p-5 p-1'>
-            <p>{item.harga}</p>
-            </div>
-            </div>
-            </div>
+                return(
+                    <div>
+                        <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700">
+                            <li className="py-3 sm:py-4">
+                                <div className="flex items-center space-x-4">
+                                    <div className="flex-shrink-0">
+                                        <img className="w-20 h-20 rounded-full" src={item.image} alt="/" />
+                                    </div>
+                                    <div className="flex-1 min-w-0">
+                                        <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                        {item.name}
+                                        </p>
+                                        <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                                        {item.harga}
+                                        </p>
+                                    </div>
+                                    
+                                    <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                        <NavLink to={"/Kuliner/Makanan/DetailMakanan"}>
+                                        <a href="#" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Detail</a>
+                                        </NavLink>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    <hr></hr>
+                    </div>
+                )}
             )}
-            )}
-            </div>
         </div>
-
     </div>
     );
     };

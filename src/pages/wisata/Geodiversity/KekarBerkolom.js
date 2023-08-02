@@ -1,6 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-import { BiArrowBack } from 'react-icons/bi'
+import HeaderDetail from '../../../components/wisata/HeaderDetail'
 import kekarberkolom from '../../../assets/Kekar Berkolom2.jpg'
 
 const KekarBerkolom = () => {
@@ -15,14 +14,7 @@ const KekarBerkolom = () => {
 
     return (
         <div>
-            <div className='rounded-b-2xl flex w-full md:h-20 h-12 bg-gradient-to-r from-blue-400 via-blue-500 to-cyan-600'>
-                <div className='flex justify-center items-center p-2'>
-                    <NavLink to={"/Geodiversity"}>
-                        <BiArrowBack size={30} className='mr-4 ml-2 text-[var(--primary-dark)]' />
-                    </NavLink>
-                <h1 className='font-cde md:text-4xl text-xl font-bold text-black'>Kekar Berkolom</h1>
-                </div>
-            </div>
+            <HeaderDetail judul={'Kekar Berkolom'} link={"/Geodiversity"}/>
             <div>
                 <p className='text-center md:text-5xl text-xl font-cde font-bold md:p-5 p-0 md:mt-0 mt-3'>
                     Kekar Berkolom

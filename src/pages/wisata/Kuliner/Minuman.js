@@ -1,9 +1,10 @@
 import React from 'react'
+import HeaderDetail from '../../../components/wisata/HeaderDetail'
 
 const Minuman = () => {
     return (
         <div>
-        <h1>Halaman Minuman</h1>
+            <HeaderDetail judul={'Minuman'} link={"/Kuliner"}/>
         </div>
     )
 }

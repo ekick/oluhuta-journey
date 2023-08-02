@@ -2,7 +2,7 @@ import React from 'react'
 import kekarberkolom1 from '../../assets/Kekar Berkolom1.jpg'
 import kekarberlembar1 from '../../assets/Kekar Berlembar1.jpg'
 import lautanterangkat1 from '../../assets/Lautan Terangkat1.jpg'
-import {BiArrowBack} from 'react-icons/bi'
+import HeaderDetail from '../../components/wisata/HeaderDetail'
 import { NavLink } from "react-router-dom";
 
 const Geodiversity = () => {
@@ -14,14 +14,7 @@ const Geodiversity = () => {
 
     return (
         <div>
-            <div className='rounded-b-2xl flex w-full md:h-20 h-12 bg-gradient-to-r from-blue-400 via-blue-500 to-cyan-600'>
-                <div className='flex justify-center items-center p-2'>
-                    <NavLink to={"/Beranda"}>
-                        <BiArrowBack size={30} className='mr-4 ml-2 text-[var(--primary-dark)]' />
-                    </NavLink>
-                <h1 className='font-cde md:text-4xl text-xl font-bold text-black'>Geodiversity</h1>
-                </div>
-            </div>
+                <HeaderDetail judul={'Geodiversity'} link={"/Beranda"}/>
                 {ListGeodiversity.map((item, index) => {
                 return(
                     <div className='' key={index}>

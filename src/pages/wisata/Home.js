@@ -67,12 +67,12 @@ const Home = () => {
               </div>
               </div>
               <div className="flex justify-center items-center w-screen md:mt-1 mt-20">
-                    <NavLink to="/PemanduWisata">
-                        <button type="button" className="w-full inline-flex flex-col items-center justify-center px-5 border-gray-200 border-x bg-blue-700 bg-opacity-30 hover:bg-gray-50 dark:hover:bg-gray-800 group dark:border-gray-600 rounded-xl text-black font-cde font-bold md:text-4xl text-xl">
-                        Yuk Kita Mulai
-                        </button>
-                    </NavLink>
-                </div>
+                <NavLink to="/PemanduWisata">
+                    <button type="button" className="w-full inline-flex flex-col items-center justify-center px-5 border-gray-200 border-x bg-blue-700 bg-opacity-30 hover:bg-gray-50 dark:hover:bg-gray-800 group dark:border-gray-600 rounded-xl text-black font-cde font-bold md:text-4xl text-xl">
+                    Yuk Kita Mulai
+                    </button>
+                </NavLink>
+              </div>
             </div>
           </div>
         </div>

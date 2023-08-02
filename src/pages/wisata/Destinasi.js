@@ -43,16 +43,14 @@ const Destinasi = () => {
           </p>
         </div>
       </div>
-        <div className='flex justify-center items-center mt-5'>
+        <div className='flex justify-center items-center mt-3 px-2'>
           <iframe
           title="Video YouTube"
-          width="1620"
-          height="520"
           src="https://www.youtube.com/embed/zdUw-sQBzk4"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-          className='rounded-3xl px-2'>
+          className='rounded-3xl px-2 w-screen max-w-4xl md:h-128 h-52'>
           </iframe>
         </div>
       <div className='flex justify-center items-center px-3 mt-5 mb-20'>

@@ -19,11 +19,17 @@ import PemanduWisata from "./pages/wisata/PemanduWisata";
 import Kuliner from "./pages/wisata/Kuliner"
 import Penyewaan from "./pages/wisata/Penyewaan";
 import KekarBerkolom from "./pages/wisata/Geodiversity/KekarBerkolom";
-// import KekarBerlembar from "./pages/wisata/Geodiversity/KekarBerlembar";
+import KekarBerlembar from "./pages/wisata/Geodiversity/KekarBerlembar";
 import Makanan from "./pages/wisata/Kuliner/Makanan";
 import Minuman from "./pages/wisata/Kuliner/Minuman";
+<<<<<<< HEAD
 import ProfileWisata from './pages/wisata/ProfileWisata';
 
+=======
+import DetailMakanan from './pages/wisata/Kuliner/DetailMakanan';
+import ProfilWisata from './pages/wisata/ProfilWisata';
+import DetailPenyewaan from './pages/wisata/Penyewaan/DetailPenyewaan';
+>>>>>>> b19d757f087beecd84411a56e4262814058f4918
 
 // dashboard pages import
 import Geologi from "./pages/dashboard/Geologi";
@@ -59,6 +65,7 @@ const App = () => {
           <Route element={<WisataLayout />} >
             <Route path="/" element={<Home />}/>
             <Route path="/Beranda" element={<Beranda />}/>
+            <Route path="/ProfilWisata" element={<ProfilWisata />}/>
             <Route path="/Biodiversity" element={<BiodiversityWisata />}/>
             <Route path="/Culturaldiversity" element={<CulturaldiversityWisata />}/>
             <Route path="/Geodiversity" element={<Geodiversity />}/>
@@ -66,8 +73,10 @@ const App = () => {
             <Route path="/MiniMap" element={<MiniMap />}/>
             <Route path="/Kuliner" element={<Kuliner />}/>
             <Route path="/Kuliner/Makanan" element={<Makanan />}/>
+            <Route path="/Kuliner/Makanan/DetailMakanan" element={<DetailMakanan />}/>
             <Route path="/Kuliner/Minuman" element={<Minuman />}/>
             <Route path="/Penyewaan" element={<Penyewaan />}/>
+            <Route path="/Penyewaan/DetailPenyewaan" element={<DetailPenyewaan />}/>
             <Route path="/SyaratDanKetentuan" element={<SyaratDanKetentuan />}/>
             <Route path="/PemanduWisata" element={<PemanduWisata />}/>
             <Route path="/Destinasi" element={<Destinasi />}/>
