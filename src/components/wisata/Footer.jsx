@@ -10,11 +10,7 @@ const Footer = () => {
         {id: 1, title: 'Beranda', path: '/Beranda', image: iconhome},
         {id: 2, title: 'ORI', path: '/Destinasi', image: icondestinasi},
         {id: 3, title: 'Scan', path: '/Scan', image: iconscan},
-<<<<<<< HEAD
         {id: 4, title: 'Profil', path: '/ProfileWisata', image: iconprofil},
-=======
-        {id: 4, title: 'Profil', path: '/ProfilWisata', image: iconprofil},
->>>>>>> b19d757f087beecd84411a56e4262814058f4918
     ]
 
 return (
