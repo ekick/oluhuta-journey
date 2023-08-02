@@ -22,16 +22,12 @@ import KekarBerkolom from "./pages/wisata/Geodiversity/KekarBerkolom";
 import KekarBerlembar from "./pages/wisata/Geodiversity/KekarBerlembar";
 import Makanan from "./pages/wisata/Kuliner/Makanan";
 import Minuman from "./pages/wisata/Kuliner/Minuman";
-<<<<<<< HEAD
-import ProfileWisata from './pages/wisata/ProfileWisata';
 
-=======
+// dashboard pages import
+import ProfileWisata from './pages/wisata/ProfileWisata';
 import DetailMakanan from './pages/wisata/Kuliner/DetailMakanan';
 import ProfilWisata from './pages/wisata/ProfilWisata';
 import DetailPenyewaan from './pages/wisata/Penyewaan/DetailPenyewaan';
->>>>>>> b19d757f087beecd84411a56e4262814058f4918
-
-// dashboard pages import
 import Geologi from "./pages/dashboard/Geologi";
 import Laporan from "./pages/dashboard/Laporan";
 import Profile from "./pages/dashboard/Profile";
