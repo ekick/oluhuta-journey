@@ -10,11 +10,11 @@ const Footer = () => {
         {id: 1, title: 'Beranda', path: '/Beranda', image: iconhome},
         {id: 2, title: 'ORI', path: '/Destinasi', image: icondestinasi},
         {id: 3, title: 'Scan', path: '/Scan', image: iconscan},
-        {id: 4, title: 'Profil', path: '/Profil', image: iconprofil},
+        {id: 4, title: 'Profil', path: '/ProfilWisata', image: iconprofil},
     ]
 
 return (
-<div class="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+<div class="fixed bottom-0 left-0 z-50 w-full h-16 bg-white  border-gray-200 dark:bg-gray-700 dark:border-gray-600">
     <div class="grid h-full max-w-3xl grid-cols-4 mx-auto font-medium">
         {navButton.map((item, index) => {
             return(

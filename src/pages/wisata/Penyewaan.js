@@ -8,7 +8,7 @@ import perahukaca from '../../assets/perahu.png'
 
 const Penyewaan = () => {
     const ListPenyewaan = [
-        {id: 1, title: 'Alat Snorekling', path: '/Penyewaan/AlatSnorekling', image: alatsnorekling},
+        {id: 1, title: 'Alat Snorekling', path: '/Penyewaan/DetailPenyewaan', image: alatsnorekling},
         {id: 2, title: 'Alat Camping', path: '/Penyewaan/AlatCamping', image: alatcamping},
         {id: 3, title: 'Kamera Bawah Laut', path: '/Penyewaan/KameraBawahLaut', image: kamerabawahlaut},
         {id: 4, title: 'Perahu Kaca', path: '/Penyewaan/PerahuKaca', image: perahukaca},

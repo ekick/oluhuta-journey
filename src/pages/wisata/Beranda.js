@@ -40,7 +40,7 @@ const Beranda = () => {
     return (
         <div>
             <div>
-                <img className='max-h-96 w-full rounded-b-2xl'  src={backhome} alt='/' />
+                <img className='object-cover max-h-94 w-full rounded-b-2xl'  src={backhome} alt='/' />
                 <div className='w-screen h-screen absolute top-0 flex flex-col'>
                     <div>
                         <div className='flex justify-between w-fit p-3'>
