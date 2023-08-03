@@ -19,7 +19,6 @@ import PemanduWisata from "./pages/wisata/PemanduWisata";
 import Kuliner from "./pages/wisata/Kuliner"
 import Penyewaan from "./pages/wisata/Penyewaan";
 import KekarBerkolom from "./pages/wisata/Geodiversity/KekarBerkolom";
-import KekarBerlembar from "./pages/wisata/Geodiversity/KekarBerlembar";
 import Makanan from "./pages/wisata/Kuliner/Makanan";
 import Minuman from "./pages/wisata/Kuliner/Minuman";
 
