@@ -22,8 +22,9 @@ import KekarBerkolom from "./pages/wisata/Geodiversity/KekarBerkolom";
 import Makanan from "./pages/wisata/Kuliner/Makanan";
 import Minuman from "./pages/wisata/Kuliner/Minuman";
 import DetailMakanan from './pages/wisata/Kuliner/DetailMakanan';
-import DetailPenyewaan from './pages/wisata/Penyewaan/DetailPenyewaan';
+import DetailPenyewaanSnorekling from './pages/wisata/Penyewaan/DetailPenyewaanSnorekling';
 import ProfileWisata from './pages/wisata/ProfileWisata';
+import Ekonomi from './pages/wisata/Ekonomi';
 
 // dashboard pages import
 import Geologi from "./pages/dashboard/Geologi";
@@ -69,12 +70,13 @@ const App = () => {
             <Route path="/Kuliner/Makanan/DetailMakanan" element={<DetailMakanan />}/>
             <Route path="/Kuliner/Minuman" element={<Minuman />}/>
             <Route path="/Penyewaan" element={<Penyewaan />}/>
-            <Route path="/Penyewaan/DetailPenyewaan" element={<DetailPenyewaan />}/>
+            <Route path="/Penyewaan/DetailPenyewaanSnorekling" element={<DetailPenyewaanSnorekling />}/>
             <Route path="/SyaratDanKetentuan" element={<SyaratDanKetentuan />}/>
             <Route path="/PemanduWisata" element={<PemanduWisata />}/>
             <Route path="/Destinasi" element={<Destinasi />}/>
             <Route path="/Scan" element={<Scan />}/>
             <Route path="/ProfileWisata" element={<ProfileWisata/>}/>
+            <Route path="/Ekonomi" element={<Ekonomi/>}/>
             <Route path="/SpotWisata" element={<SpotWisata />}/>
             <Route path="/Budaya" element={<Budaya />}/>
             <Route path="/Umkm" element={<UmkmWisata />}/>

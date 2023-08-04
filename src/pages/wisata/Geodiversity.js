@@ -23,10 +23,10 @@ const Geodiversity = () => {
                             <li class="pb-4 sm:pb-4">
                                 <div class="flex items-center space-x-4">
                                     <div class="flex-shrink-0">
-                                        <img class="w-14 h-14 " src={item.image} alt="/" />
+                                        <img class="w-14 h-14 rounded-xl" src={item.image} alt="/" />
                                     </div>
                                     <div class="flex-1 min-w-0">
-                                        <p class="font-cde text-sm font-medium text-black dark:text-white">
+                                        <p class="font-cde text-sm font-medium text-black">
                                         {item.title}
                                         </p>
                                     </div>

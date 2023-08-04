@@ -31,7 +31,7 @@ const Kuliner = () => {
                                             <img class="w-14 h-14 " src={item.image} alt="/" />
                                         </div>
                                         <div class="flex-1 min-w-0">
-                                            <p class="font-cde ext-sm font-medium text-black dark:text-white">
+                                            <p class="font-cde ext-sm font-medium text-black">
                                             {item.title}
                                             </p>
                                         </div>
