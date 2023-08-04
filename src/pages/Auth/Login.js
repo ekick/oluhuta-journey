@@ -53,7 +53,7 @@ const Login= () => {
 
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 h-screen w-full'>
-      <ToastContainer autoClose={5000} />
+      {/* <ToastContainer autoClose={5000} /> */}
       <div className='bg-gray-700 hidden sm:block'>
         <img className='w-full h-full dark:opacity-75' src={BG} alt="gambar"/>
       </div>
@@ -80,7 +80,7 @@ const Login= () => {
             />
           </div>
           <div className='flex justify-between text-gray-400 py-2'>
-            <a href="./pages/register" className="text-white">
+            <a href="/register" className="text-white">
                 Registrasi
             </a>
           </div>
