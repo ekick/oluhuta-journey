@@ -11,14 +11,19 @@ import Scan from "./pages/wisata/Scan";
 import Beranda from "./pages/wisata/Beranda";
 import Destinasi from "./pages/wisata/Destinasi";
 import BiodiversityWisata from "./pages/wisata/BiodiversityWisata";
+import IkanKarang from './pages/wisata/Biodiversity/IkanKarang';
+import PohonStigi from './pages/wisata/Biodiversity/PohonStigi';
+import TerumbuKarang from './pages/wisata/Biodiversity/TerumbuKarang';
 import CulturaldiversityWisata from "./pages/wisata/CulturaldiversityWisata";
 import Geodiversity from "./pages/wisata/Geodiversity";
+import KekarBerkolom from "./pages/wisata/Geodiversity/KekarBerkolom";
+import KekarBerlembar from './pages/wisata/Geodiversity/KekarBerlembar';
+import LautanTerangkat from './pages/wisata/Geodiversity/LautanTerangkat';
 import MiniMap from "./pages/wisata/MiniMap";
 import SyaratDanKetentuan from "./pages/wisata/SyaratDanKetentuan";
 import PemanduWisata from "./pages/wisata/PemanduWisata";
 import Kuliner from "./pages/wisata/Kuliner"
 import Penyewaan from "./pages/wisata/Penyewaan";
-import KekarBerkolom from "./pages/wisata/Geodiversity/KekarBerkolom";
 import Makanan from "./pages/wisata/Kuliner/Makanan";
 import Minuman from "./pages/wisata/Kuliner/Minuman";
 import DetailMakanan from './pages/wisata/Kuliner/DetailMakanan';
@@ -61,9 +66,14 @@ const App = () => {
             <Route path="/" element={<Home />}/>
             <Route path="/Beranda" element={<Beranda />}/>
             <Route path="/Biodiversity" element={<BiodiversityWisata />}/>
+            <Route path="/Biodiversity/IkanKarang" element={<IkanKarang />}/>
+            <Route path="/Biodiversity/PohonStigi" element={<PohonStigi />}/>
+            <Route path="/Biodiversity/TerumbuKarang" element={<TerumbuKarang />}/>
             <Route path="/Culturaldiversity" element={<CulturaldiversityWisata />}/>
             <Route path="/Geodiversity" element={<Geodiversity />}/>
             <Route path="/Geodiversity/KekarBerkolom" element={<KekarBerkolom />}/>
+            <Route path="/Geodiversity/KekarBerlembar" element={<KekarBerlembar />}/>
+            <Route path="/Geodiversity/LautanTerangkat" element={<LautanTerangkat />}/>
             <Route path="/MiniMap" element={<MiniMap />}/>
             <Route path="/Kuliner" element={<Kuliner />}/>
             <Route path="/Kuliner/Makanan" element={<Makanan />}/>

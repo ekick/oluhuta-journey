@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import snorekling from '../../../assets/Peralatan Snorkling.jpg'
 import HeaderDetail from '../../../components/wisata/HeaderDetail'
+import Judul from '../../../components/wisata/Judul';
 import 'react-datepicker/dist/react-datepicker.css';
 import { DetailSnorekling, InformasiSnorekling, SyaratdanKetentuan } from '../../../hooks/StateAuth';
 
@@ -28,11 +29,7 @@ const DetailPenyewaanSnorekling = () => {
     return (
         <div>
             <HeaderDetail judul={'Detail Penyewaan Alat'} link={"/Penyewaan/"}/>
-            <div>
-                <p className='text-center md:text-5xl text-xl font-cde font-bold md:p-5 p-0 md:mt-0 mt-3'>
-                Alat Snorekling
-                </p>
-            </div>
+            <Judul name={'Alat Snorekling'}/>
             <div className='flex justify-center items-center'>
                 <div className='w-screen max-w-7xl px-2 py-4'>
                     <div className=" w-full items-center justify-center border-solid border-4 border-blue-500 rounded-3xl">            
