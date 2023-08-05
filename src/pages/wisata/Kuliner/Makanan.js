@@ -1,32 +1,34 @@
 import React, { useState } from 'react'
 import HeaderDetail from '../../../components/wisata/HeaderDetail';
 import { NavLink } from 'react-router-dom';
-import makanan from '../../../assets/makanan.png'
+import { Makanan1 } from '../../../hooks/StateAuth';
 
 
 const Makanan = () => {
 const [searchText, setSearchText] = useState('');
-const items = [
-    {id: 1, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
-    {id: 2, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
-    {id: 3, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
-    {id: 4, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
-    {id: 5, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
-    {id: 6, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
-    {id: 7, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
-    {id: 8, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
-    {id: 9, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
-    {id: 10, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
-    {id: 11, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
-    {id: 12, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
-    {id: 13, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
-    {id: 14, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
-    {id: 15, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
-    {id: 16, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
-    {id: 17, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
-    {id: 18, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
-];
-const Food = items.filter((item) =>
+const datamakanan = Makanan1.useState(s => s.makanan)
+
+// const items = [
+//     {id: 1, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 2, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 3, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 4, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 5, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 6, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 7, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 8, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 9, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 10, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 11, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 12, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 13, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 14, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 15, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 16, name: 'Nasi Kuning', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 17, name: 'Nasi Kuning Ayam', image: makanan, harga: 'Rp. 10.000' },
+//     {id: 18, name: 'Pisang Goreng', image: makanan, harga: 'Rp. 10.000' },
+// ];
+const Food = datamakanan.filter((item) =>
     item.name.toLowerCase().includes(searchText.toLowerCase())
 );
 
@@ -65,9 +67,8 @@ return (
                                         {item.harga}
                                         </p>
                                     </div>
-                                    
                                     <div className="inline-flex items-center text-base font-semibold text-gray-900">
-                                        <NavLink to={"/Kuliner/Makanan/DetailMakanan"}>
+                                        <NavLink to={"/Kuliner/Makanan/:id"}>
                                         <a href="#" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Detail</a>
                                         </NavLink>
                                     </div>

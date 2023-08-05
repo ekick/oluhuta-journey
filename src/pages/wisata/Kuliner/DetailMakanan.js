@@ -3,8 +3,9 @@ import { useState } from 'react'
 import bakwan from '../../../assets/Bakwan.jpg'
 import { FaPlus,FaMinus} from 'react-icons/fa'
 import HeaderDetail from '../../../components/wisata/HeaderDetail'
+import { Makanan1 } from '../../../hooks/StateAuth'
 
-const DetailMakanan = ( ) => {
+const DetailMakanan = ( ) => {    
     const [JumlahMakanan, setJumlahMakanan] = useState(0);
     const hargaMakanan = 1000;
     const totalHarga = JumlahMakanan * hargaMakanan;
@@ -18,6 +19,8 @@ const DetailMakanan = ( ) => {
         setJumlahMakanan(JumlahMakanan - 1);
         }
     };
+
+    
 
     return (
         <div>

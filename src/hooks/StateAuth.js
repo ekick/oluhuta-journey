@@ -1,5 +1,6 @@
 import { Store } from "pullstate";
 import { loginAPI } from "../api/APIauth";
+import imgmakanan from '../assets/makanan.png'
 
 // deklarasi State Data User
 export const UserState = new Store({
@@ -93,4 +94,26 @@ export const LautanTerangkat1 =new Store({
   ]
 })
 
-//Data Biodiversity
+//Data Makanan
+export const Makanan1 =new Store({
+  makanan :[
+    {id: 1, name: 'Nasi Kuning', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 2, name: 'Nasi Kuning Ayam', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 3, name: 'Pisang Goreng', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 4, name: 'Nasi Kuning', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 5, name: 'Nasi Kuning Ayam', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 6, name: 'Pisang Goreng', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 7, name: 'Nasi Kuning', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 8, name: 'Nasi Kuning Ayam', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 9, name: 'Pisang Goreng', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 10, name: 'Nasi Kuning', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 11, name: 'Nasi Kuning Ayam', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 12, name: 'Pisang Goreng', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 13, name: 'Nasi Kuning', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 14, name: 'Nasi Kuning Ayam', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 15, name: 'Pisang Goreng', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 16, name: 'Nasi Kuning', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 17, name: 'Nasi Kuning Ayam', image: imgmakanan, harga: 'Rp. 10.000' },
+    {id: 18, name: 'Pisang Goreng', image: imgmakanan, harga: 'Rp. 10.000' },
+  ]
+})

@@ -76,8 +76,8 @@ const App = () => {
             <Route path="/Geodiversity/LautanTerangkat" element={<LautanTerangkat />}/>
             <Route path="/MiniMap" element={<MiniMap />}/>
             <Route path="/Kuliner" element={<Kuliner />}/>
-            <Route path="/Kuliner/Makanan" element={<Makanan />}/>
-            <Route path="/Kuliner/Makanan/DetailMakanan" element={<DetailMakanan />}/>
+            <Route path="/Kuliner/Makanan" exact Component={Makanan}/>
+            <Route path="/Kuliner/Makanan/:id" element={<DetailMakanan />}/>
             <Route path="/Kuliner/Minuman" element={<Minuman />}/>
             <Route path="/Penyewaan" element={<Penyewaan />}/>
             <Route path="/Penyewaan/DetailPenyewaanSnorekling" element={<DetailPenyewaanSnorekling />}/>
