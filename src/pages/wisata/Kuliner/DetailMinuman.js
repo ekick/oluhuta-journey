@@ -3,44 +3,44 @@ import { useState } from 'react'
 import { FaPlus,FaMinus} from 'react-icons/fa'
 import HeaderDetail from '../../../components/wisata/HeaderDetail'
 import { useParams } from 'react-router-dom'
-import { Makanan1 } from '../../../hooks/StateWisata'
+import { Minuman1 } from '../../../hooks/StateWisata'
 
-const DetailMakanan = ( ) => {    
-    let {DetailMakananID} = useParams();
-    const datamakanan = Makanan1.useState(s => s.makanan)
-    const filterData = datamakanan.filter((item) => item.id == DetailMakananID);
-    const FoodDetail = filterData[0]
-    const [JumlahMakanan, setJumlahMakanan] = useState(0);
-    const totalHarga = JumlahMakanan * FoodDetail.harga;
+const DetailMinuman = ( ) => {    
+    let {DetailMinumanID} = useParams();
+    const dataminuman = Minuman1.useState(s => s.minuman)
+    const filterData = dataminuman.filter((item) => item.id == DetailMinumanID);
+    const DrinkDetail = filterData[0]
+    const [JumlahMinuman, setJumlahMinuman] = useState(0);
+    const totalHarga = JumlahMinuman * DrinkDetail.harga;
 
     const handleIncrement = () => {
-        setJumlahMakanan(JumlahMakanan + 1);
+        setJumlahMinuman(JumlahMinuman + 1);
     };
 
     const handleDecrement = () => {
-        if (JumlahMakanan > 0) {
-        setJumlahMakanan(JumlahMakanan - 1);
+        if (JumlahMinuman > 0) {
+        setJumlahMinuman(JumlahMinuman - 1);
         }
     };
     return (
         <div>
-            <HeaderDetail judul={'Detail Makanan'} link={"/Kuliner/Makanan"}/>
+            <HeaderDetail judul={'Detail Minuman'} link={"/Kuliner/Minuman"}/>
             
             <div className='flex justify-center items-center'>
                 <div className='w-screen max-w-7xl px-2 py-4'>
                     <div className=" w-full items-center justify-center border-solid border-4 border-blue-500 rounded-3xl">            
-                        <img src={FoodDetail.image} alt="" className='w-screen md:h-128 object-cover rounded-2xl ' />
+                        <img src={DrinkDetail.image} alt="" className='w-screen md:h-128 object-cover rounded-2xl ' />
                     </div>
                 </div>
             </div>
             <div>
                 <p className='text-center md:text-6xl text-xl font-cde font-bold md:p-5 p-0 md:mt-0 mt-3'>
-                {FoodDetail.name}
+                {DrinkDetail.name}
                 </p>
             </div>
             <div>
                 <p className='text-center md:text-4xl text-base font-cde font-bold md:mt-0 mt-3'>
-                Harga Rp. {FoodDetail.harga}
+                Harga Rp. {DrinkDetail.harga}
                 </p>
             </div>
             <div>
@@ -53,7 +53,7 @@ const DetailMakanan = ( ) => {
                     <FaMinus size={30} style={{color: 'black'}} onClick={handleDecrement} className='cursor-pointer' />
                 </div>
                 <div className='flex items-center px-5'>
-                    <h2>{JumlahMakanan}</h2>
+                    <h2>{JumlahMinuman}</h2>
                 </div>
                 <div className='flex items-center'>
                     <FaPlus size={30} style={{color: 'black'}} onClick={handleIncrement} className='cursor-pointer' />
@@ -68,4 +68,4 @@ const DetailMakanan = ( ) => {
     )
 }
 
-export default DetailMakanan
+export default DetailMinuman

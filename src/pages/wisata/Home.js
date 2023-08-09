@@ -35,10 +35,10 @@ const Home = () => {
                 <img src={logo} className="md:w-52 w-24 md:h-52 h-24" alt="/" />
               </div>
               <a href="#" class="">
-                <h5 className="px-4 md:text-7xl text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Oluhuta</h5>
-                <h5 className="md:ml-24 ml-0 px-8 md:text-7xl text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Journey</h5>
-                <p className="md:mt-10 mt-3 md:text-3xl ml-3 text-sm text-gray-700 dark:text-gray-400">Kec. Kabila, Kab. Bone Bolango</p>
-                <p className="md:mt-3 mt-0 md:text-3xl ml-3 text-sm text-gray-700 dark:text-gray-400">Provinsi Gorontalo, Indonesia</p>
+                <h5 className="px-4 md:text-7xl text-2xl font-bold tracking-tight text-gray-900">Oluhuta</h5>
+                <h5 className="md:ml-24 ml-0 px-8 md:text-7xl text-2xl font-bold tracking-tight text-gray-900">Journey</h5>
+                <p className="md:mt-10 mt-3 md:text-3xl ml-3 text-sm text-gray-700">Kec. Kabila, Kab. Bone Bolango</p>
+                <p className="md:mt-3 mt-0 md:text-3xl ml-3 text-sm text-gray-700">Provinsi Gorontalo, Indonesia</p>
               </a>
               <div className="flex justify-center items-center w-screen md:mt-0 mt-20">
               <div className="w-screen max-w-7xl">
