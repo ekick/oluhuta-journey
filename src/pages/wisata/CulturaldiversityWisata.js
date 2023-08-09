@@ -1,23 +1,18 @@
 import React from 'react'
+import { Cul } from '../../hooks/StateWisata';
 import HeaderDetail from '../../components/wisata/HeaderDetail';
-import budayamembuatperahu from '../../assets/Budaya Membuat Perahu1.jpg'
-import situsmanusiaoluhuta from '../../assets/Situs Manusia Oluhuta1.png'
 import { NavLink } from "react-router-dom";
 
 const CulturaldiversityWisata= () => {
-    const ListCulturaldiversity = [
-        {id: 1, title: 'Perahu Tradisional', path: '/Culturaldiversity/PerahuTradisional', image: budayamembuatperahu},
-        {id: 2, title: 'Situs Manusia Oluhuta', path: '/Culturaldiversity/SitusManusiaOluhuta', image: situsmanusiaoluhuta},
-    ]
-
+    const cul = Cul.useState(s => s.cul)
     return (
         <div>
             <HeaderDetail judul={'Culturaldiversity'} link={"/Beranda"}/>
-                {ListCulturaldiversity.map((item, index) => {
+                {cul.map((item, index) => {
                 return(
                     <div className='' key={index}>
-                        <NavLink to={item.path}>
-                            <ul class="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
+                        <NavLink to={`/Culturaldiversity/${item.id}`}>
+                            <ul class="max-w-md divide-y divide-gray-200 ">
                                 <li class="pb-4 sm:pb-4">
                                     <div class="flex items-center space-x-4">
                                         <div class="flex-shrink-0">
