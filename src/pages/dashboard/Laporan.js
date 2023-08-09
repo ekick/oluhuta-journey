@@ -11,87 +11,87 @@ import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAx
 const Laporan = () => {
    
     return (
-      <div class={`p-4 sm:ml-64 `}>
+      <div className={`p-4 sm:ml-64 `}>
          <h1 className='pl-4 text-xl'><b>Laporan</b></h1>
          <div className="p-4 rounded-lg">
-           {/* <div class="p-4 rounded-lg mt-14"> */}
+           {/* <div className="p-4 rounded-lg mt-14"> */}
                <div className=" items-center justify-center rounded bg-gray-200 p-3">  
                   Laporan
                   
-                  <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                     <table  class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 light:bg-gray-500 dark:text-gray-400">
+                  <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+                     <table  className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead className="text-xs text-gray-700 uppercase bg-gray-50 light:bg-gray-500 dark:text-gray-400">
                               <tr>
-                                 <th scope="col" class="p-4">
-                                    <div class="flex items-center">
+                                 <th scope="col" className="p-4">
+                                    <div className="flex items-center">
                                           No
                                     </div>
                                  </th>
-                                 <th scope="col" class="px-6 py-3">
+                                 <th scope="col" className="px-6 py-3">
                                     th1
                                  </th>
-                                 <th scope="col" class="px-6 py-3">
+                                 <th scope="col" className="px-6 py-3">
                                     th2
                                  </th>
-                                 <th scope="col" class="px-6 py-3">
+                                 <th scope="col" className="px-6 py-3">
                                     th3
                                  </th>
-                                 <th scope="col" class="px-6 py-3">
+                                 <th scope="col" className="px-6 py-3">
                                     th4
                                  </th>
-                                 <th scope="col" class="px-6 py-3">
+                                 <th scope="col" className="px-6 py-3">
                                     Aksi
                                  </th>
                               </tr>
                               
                         </thead>
                         <tbody>
-                              <tr class="bg-white border-b light:bg-gray-800 light:border-gray-800 ">
-                                 <td class="w-4 p-4">
+                              <tr className="bg-white border-b light:bg-gray-800 light:border-gray-800 ">
+                                 <td className="w-4 p-4">
                                     1
                                  </td>
-                                 <td class="px-6 py-4">
+                                 <td className="px-6 py-4">
                                     asd
                                  </td>
-                                 <td class="px-6 py-4">
+                                 <td className="px-6 py-4">
                                    asd
                                  </td>
-                                 <td class="px-6 py-4">
+                                 <td className="px-6 py-4">
                                     asd
                                  </td>
-                                 <td class="px-6 py-4">
+                                 <td className="px-6 py-4">
                                     asda
                                  </td>
-                                 <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-red-500"><BsFillTrashFill/></a>
+                                 <td className="px-6 py-4">
+                                    <a href="#" className="font-medium text-red-500"><BsFillTrashFill/></a>
                                  </td>
                               </tr>
                         </tbody>
                      </table>
                         
-                     <nav class="flex items-center justify-between p-4" aria-label="Table navigation">
-                        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Showing <span class="font-semibold text-gray-900 dark:text-white">1-10</span> of <span class="font-semibold text-gray-900 dark:text-white">1000</span></span>
-                        <ul class="inline-flex -space-x-px text-sm h-8">
+                     <nav className="flex items-center justify-between p-4" aria-label="Table navigation">
+                        <span className="text-sm font-normal text-gray-500 dark:text-gray-400">Showing <span className="font-semibold text-gray-900 dark:text-white">1-10</span> of <span className="font-semibold text-gray-900 dark:text-white">1000</span></span>
+                        <ul className="inline-flex -space-x-px text-sm h-8">
                               <li>
-                                 <a href="#" class="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+                                 <a href="#" className="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
                               </li>
                               <li>
-                                 <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                                 <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
                               </li>
                               <li>
-                                 <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                                 <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
                               </li>
                               <li>
-                                 <a href="#" aria-current="page" class="flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                                 <a href="#" aria-current="page" className="flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
                               </li>
                               <li>
-                                 <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+                                 <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
                               </li>
                               <li>
-                                 <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+                                 <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
                               </li>
                               <li>
-                                 <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+                                 <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
                               </li>
                         </ul>
                      </nav>
@@ -106,80 +106,80 @@ const Laporan = () => {
                <div className=" items-center justify-center rounded bg-gray-200 p-3 mt-5">  
                   Laporan
                   
-                  <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                     <table  class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 light:bg-gray-500 dark:text-gray-400">
+                  <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+                     <table  className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead className="text-xs text-gray-700 uppercase bg-gray-50 light:bg-gray-500 dark:text-gray-400">
                               <tr>
-                                 <th scope="col" class="p-4">
-                                    <div class="flex items-center">
+                                 <th scope="col" className="p-4">
+                                    <div className="flex items-center">
                                           No
                                     </div>
                                  </th>
-                                 <th scope="col" class="px-6 py-3">
+                                 <th scope="col" className="px-6 py-3">
                                     th1
                                  </th>
-                                 <th scope="col" class="px-6 py-3">
+                                 <th scope="col" className="px-6 py-3">
                                     th2
                                  </th>
-                                 <th scope="col" class="px-6 py-3">
+                                 <th scope="col" className="px-6 py-3">
                                     th3
                                  </th>
-                                 <th scope="col" class="px-6 py-3">
+                                 <th scope="col" className="px-6 py-3">
                                     th4
                                  </th>
-                                 <th scope="col" class="px-6 py-3">
+                                 <th scope="col" className="px-6 py-3">
                                     Aksi
                                  </th>
                               </tr>
                               
                         </thead>
                         <tbody>
-                              <tr class="bg-white border-b light:bg-gray-800 light:border-gray-800 ">
-                                 <td class="w-4 p-4">
+                              <tr className="bg-white border-b light:bg-gray-800 light:border-gray-800 ">
+                                 <td className="w-4 p-4">
                                     1
                                  </td>
-                                 <td class="px-6 py-4">
+                                 <td className="px-6 py-4">
                                     asd
                                  </td>
-                                 <td class="px-6 py-4">
+                                 <td className="px-6 py-4">
                                    asd
                                  </td>
-                                 <td class="px-6 py-4">
+                                 <td className="px-6 py-4">
                                     asd
                                  </td>
-                                 <td class="px-6 py-4">
+                                 <td className="px-6 py-4">
                                     asda
                                  </td>
-                                 <td class="px-6 py-4">
-                                    <a href="#" class="font-medium text-red-500"><BsFillTrashFill/></a>
+                                 <td className="px-6 py-4">
+                                    <a href="#" className="font-medium text-red-500"><BsFillTrashFill/></a>
                                  </td>
                               </tr>
                         </tbody>
                      </table>
                         
-                     <nav class="flex items-center justify-between p-4" aria-label="Table navigation">
-                        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Showing <span class="font-semibold text-gray-900 dark:text-white">1-10</span> of <span class="font-semibold text-gray-900 dark:text-white">1000</span></span>
-                        <ul class="inline-flex -space-x-px text-sm h-8">
+                     <nav className="flex items-center justify-between p-4" aria-label="Table navigation">
+                        <span className="text-sm font-normal text-gray-500 dark:text-gray-400">Showing <span className="font-semibold text-gray-900 dark:text-white">1-10</span> of <span className="font-semibold text-gray-900 dark:text-white">1000</span></span>
+                        <ul className="inline-flex -space-x-px text-sm h-8">
                               <li>
-                                 <a href="#" class="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+                                 <a href="#" className="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
                               </li>
                               <li>
-                                 <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                                 <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
                               </li>
                               <li>
-                                 <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                                 <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
                               </li>
                               <li>
-                                 <a href="#" aria-current="page" class="flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                                 <a href="#" aria-current="page" className="flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
                               </li>
                               <li>
-                                 <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+                                 <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
                               </li>
                               <li>
-                                 <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+                                 <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
                               </li>
                               <li>
-                                 <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+                                 <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
                               </li>
                         </ul>
                      </nav>

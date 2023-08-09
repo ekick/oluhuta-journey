@@ -94,6 +94,7 @@ const App = () => {
             <Route path="/pages/profile"element={<Profile/>}/>
           </Route>
             <Route path="/login" element={<Login/>}/>
+            <Route path="/admin/login" element={<Login/>}/>
             <Route path="/register" element={<Register/>}/>
         </Routes>
   

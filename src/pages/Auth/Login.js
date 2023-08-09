@@ -53,12 +53,13 @@ const Login= () => {
 
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 h-screen w-full'>
-      <ToastContainer autoClose={5000} />
+
       <div className='bg-gray-700 hidden sm:block'>
         <img className='w-full h-full dark:opacity-75' src={BG} alt="gambar"/>
       </div>
 
       <div className='bg-gray-100 flex flex-col justify-center'>
+        <ToastContainer autoClose={5000} />
         <form className='max-w-[400px] w-full mx-auto bg-cyan-900 p-8 px-8 rounded-lg' onSubmit={handleSubmitAuth}>
           <h2 className='text-4xl text-cyan-200 font-bold text-center'>SIGN IN</h2>
           <div className='flex flex-col text-gray-200 py-2'>
