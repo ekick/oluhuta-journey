@@ -1,24 +1,27 @@
 import mongoose from "mongoose"
 
 const Schema = new mongoose.Schema({
-  username: {
+  nama: {
     type: String,
     required: true,
     unique: true
   },
-  email: {
+  urlProfile: {
     type: String,
-    required: true,
-    unique: true
+    require: true
   },
-  password: {
+  medsos: {
     type: String,
     required: true
   },
-  status: {
+  linkAkun: {
     type: String,
-    enum: ['active', 'inactive'],
-    default: 'active'
+    required: true
+  },
+  nomorHP: {
+    type: String,
+    required: true,
+    unique: true
   },
   createdAt: {
     type: Number
@@ -34,4 +37,4 @@ const Schema = new mongoose.Schema({
 }
 )
 
-export default mongoose.model('User', Schema)
+export default mongoose.model('Pemandu', Schema)

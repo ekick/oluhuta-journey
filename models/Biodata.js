@@ -1,24 +1,19 @@
 import mongoose from "mongoose"
 
 const Schema = new mongoose.Schema({
-  username: {
-    type: String,
+  idUser: {
+    type: mongoose.Schema.Types.ObjectId,
     required: true,
     unique: true
   },
-  email: {
+  nama: {
+    type: String,
+    required: true,
+  },
+  nomorHP: {
     type: String,
     required: true,
     unique: true
-  },
-  password: {
-    type: String,
-    required: true
-  },
-  status: {
-    type: String,
-    enum: ['active', 'inactive'],
-    default: 'active'
   },
   createdAt: {
     type: Number
@@ -34,4 +29,4 @@ const Schema = new mongoose.Schema({
 }
 )
 
-export default mongoose.model('User', Schema)
+export default mongoose.model('Biodata', Schema)

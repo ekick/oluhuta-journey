@@ -1,24 +1,18 @@
 import mongoose from "mongoose"
 
 const Schema = new mongoose.Schema({
-  username: {
-    type: String,
-    required: true,
-    unique: true
-  },
-  email: {
-    type: String,
-    required: true,
-    unique: true
-  },
-  password: {
-    type: String,
+  idSpot: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'SpotWisata',
     required: true
   },
-  status: {
+  urlGambar: {
     type: String,
-    enum: ['active', 'inactive'],
-    default: 'active'
+    required: true,
+  },
+  urlQRCode: {
+    type: String,
+    required: true,
   },
   createdAt: {
     type: Number
@@ -31,7 +25,6 @@ const Schema = new mongoose.Schema({
   timestamps: {
     currentTime: () => Math.floor(Date.now() / 1000)
   }
-}
-)
+})
 
-export default mongoose.model('User', Schema)
+export default mongoose.model('GambarSpot', Schema)

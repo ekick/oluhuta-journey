@@ -1,24 +1,18 @@
 import mongoose from "mongoose"
 
 const Schema = new mongoose.Schema({
-  username: {
-    type: String,
-    required: true,
-    unique: true
-  },
-  email: {
-    type: String,
-    required: true,
-    unique: true
-  },
-  password: {
+  nama: {
     type: String,
     required: true
   },
-  status: {
+  lokasi: {
     type: String,
-    enum: ['active', 'inactive'],
-    default: 'active'
+    required: true,
+  },
+  jenis: {
+    type: String,
+    enum: ['Penjualan', 'Penyewaan'],
+    required: true
   },
   createdAt: {
     type: Number
@@ -34,4 +28,4 @@ const Schema = new mongoose.Schema({
 }
 )
 
-export default mongoose.model('User', Schema)
+export default mongoose.model('Toko', Schema)
