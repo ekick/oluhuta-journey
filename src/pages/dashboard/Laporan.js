@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
 import {BsFillTrashFill} from "react-icons/bs"
 import {BiSolidReport} from "react-icons/bi"
+import { SpotWisataState } from '../../hooks/StateSpot'
 // import BarChart from "components/chart/BarChart"; 
-// import {barChartData, barChartOptions} from "variables/charts";
-import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+// // import {barChartData, barChartOptions} from "variables/charts";
+// import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 
 const Laporan = () => {
+   const data = SpotWisataState.useState((s) => s.data);
     return (
       <div class={`p-4 sm:ml-64 `}>
          <h1 className='pl-4 text-xl'><b>Laporan</b></h1>
@@ -13,7 +15,6 @@ const Laporan = () => {
            {/* <div class="p-4 rounded-lg mt-14"> */}
                <div className=" items-center justify-center rounded bg-gray-200 p-3">  
                   Laporan
-
                   <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                      <table  class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 light:bg-gray-500 dark:text-gray-400">

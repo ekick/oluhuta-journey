@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react';
+import ImageUpload from '../../components/dashboard/ImageUpload';
 
 const Produk = () => {
+    const defaultUrl = 'https://fakeimg.pl/350x200/';     
+    const [image,setImage] = useState(defaultUrl);
+    const [imageQR,setImageQR] = useState(defaultUrl);
+    const [saveImage, setSaveImage] = useState(null);
+    const [saveImageQR, setSaveImageQR] = useState(null);
+
   return (
     <div class={`p-4 sm:ml-64 `}>
         <h1 className='pl-4 text-xl'><b>Produk</b></h1>
@@ -11,12 +18,18 @@ const Produk = () => {
                 <form>
                     <div className="grid gap-6 mb-6 md:grid-cols-2">
                         <div>
-                            <label for="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Nama Produk</label>
-                            <input type="text" className=" text-m rounded-lg block w-full p-2.5 dark:bg-gray-300 dark:placeholder-gray dark:text-gray-700 dark:focus:ring-blue-500 dark:border-gray-600 dark:focus:border-blue-500" placeholder="Nama Produk" required></input>
+                        <label htmlFor="first_name" className="block text-sm font-medium text-gray-900 dark:text-black">Gambar Produk</label>
+                        <div className='d-flex justify-content-center align-items-center'>
+                            <ImageUpload
+                            image={image}
+                            setImage={setImage}
+                            setSaveImage={setSaveImage}
+                            />
+                        </div> 
                         </div>
                         <div>
-                            <label for="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Gambar Produk</label>
-                            <input type="file" className=" text-m rounded-lg block w-full p-2.5 dark:bg-gray-300 dark:placeholder-gray dark:text-gray-700 dark:focus:ring-blue-500 dark:border-gray-600 dark:focus:border-blue-500" placeholder="Gambar Produk" required></input>
+                            <label for="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Nama Produk</label>
+                            <input type="text" className=" text-m rounded-lg block w-full p-2.5 dark:bg-gray-300 dark:placeholder-gray dark:text-gray-700 dark:focus:ring-blue-500 dark:border-gray-600 dark:focus:border-blue-500" placeholder="Nama Produk" required></input>
                         </div>
             
                     </div>
