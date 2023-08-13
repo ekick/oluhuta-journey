@@ -1,68 +1,145 @@
-import React from 'react'
-import snorekling from '../../../assets/Peralatan Snorkling.jpg'
+import React, { useState } from 'react';
 import HeaderDetail from '../../../components/wisata/HeaderDetail'
+import { useParams } from 'react-router-dom'
+import { DetPen } from '../../../hooks/StateWisata'
+import Judul from '../../../components/wisata/Judul'
+import 'react-datepicker/dist/react-datepicker.css';
 
 const DetailPenyewaan = () => {
 
-    const DetailPenyewaanSnoreklingparagraf1 = `Temukan keindahan bawah laut dengan alat snorkeling kami yang inovatif. Rasakan sensasi menyelam dalam kedamaian air biru dan jelajahi dunia bawah permukaan dengan kejernihan yang menakjubkan. Nikmati petualangan tanpa batas dengan alat snorkeling terbaik kami, cocok untuk pemula hingga ahli.`
-    const DetailPenyewaanSnoreklingparagraf2 = `Dapatkan pengalaman snorkeling tak terlupakan dengan alat berkualitas tinggi kami, yang dirancang untuk kenyamanan, keamanan, dan ketahanan. Segera dapatkan alat snorkeling kami dan buatlah momen indah bersama keluarga dan teman-teman di perairan indah favorit Anda`
-    const DetailPenyewaanSnoreklingparagraf3 = `Snorkel adalah tabung berongga yang dipasang di bagian atas masker selam untuk memungkinkan pengguna bernapas di permukaan air tanpa harus mengangkat kepala. Ini mengurangi kebutuhan untuk mengangkat kepala dari air untuk bernapas, memungkinkan penyelam untuk tetap tenggelam.`
-    const DetailPenyewaanSnoreklingparagraf4 = `Kaki katak adalah sepatu khusus yang dirancang dengan sirip di bagian bawahnya. Sirip ini membantu penyelam untuk bergerak dengan mudah dan efisien di dalam air, memberikan daya dorong ekstra yang memungkinkan penyelam untuk berenang lebih cepat dan menghemat energi.`
-    const DetailPenyewaanSnoreklingparagraf5 = `Masker selam adalah perangkat yang menutupi mata, hidung, dan sebagian wajah untuk memungkinkan penyelam melihat dengan jelas di bawah permukaan air. Masker ini biasanya memiliki lensa kaca atau polikarbonat yang tahan terhadap air laut dan memungkinkan pandangan yang jernih.`
-    const DetailPenyewaanSnoreklingparagraf6 = `Pelampung ini dirancang untuk dipakai di sekitar tubuh atau dada penyelam. Biasanya berbentuk seperti jaket atau bantalan yang terbuat dari bahan ringan dan tahan air. Pelampung ini memberikan dukungan ekstra untuk membantu penyelam berapung di permukaan air dengan mudah tanpa perlu banyak usaha berenang.`
-    const DetailPenyewaanSnoreklingparagraf7 = `Sebagai syarat dan batasan dalam menyewa alat snorkeling, berikut beberapa poin yang perlu diperhatikan penyewa :`
-    const DetailPenyewaanSnoreklingparagraf8 = `1. Penyewa diharuskan untuk menunjukkan identifikasi yang sah dan berlaku sebelum menyewa alat`
-    const DetailPenyewaanSnoreklingparagraf9 = `2. Penyewa harus mematuhi semua aturan keamanan yang ditetapkan oleh atau petugas snorkeling. Ini termasuk pemakaian jaket pelampung dan selalu berenang bersama teman atau pasangan jika snorkeling di laut terbuka.`
-    const DetailPenyewaanSnoreklingparagraf10 = `3. Sebelum menyewa, penyewa harus memeriksa kondisi alat snorkeling dan memastikan semuanya berfungsi dengan baik. Jika ada kerusakan atau masalah, laporkan kepada penyewa segera untuk mendapatkan penggantian atau perbaikan.`
-    const DetailPenyewaanSnoreklingparagraf11 = `4. Penyewa bertanggung jawab atas alat snorkeling yang disewa selama periode waktu yang ditentukan. Jika ada kerusakan atau kehilangan akibat kelalaian atau penggunaan yang salah, penyewa harus menggantinya sesuai dengan kebijakan penyewa.`
-    const DetailPenyewaanSnoreklingparagraf12 = `5.	Pastikan penyewa mengembalikan alat snorkeling sesuai dengan waktu yang disepakati. Keterlambatan pengembalian dapat mengakibatkan biaya tambahan atau denda.`
-    const DetailPenyewaanSnoreklingparagraf13 = ``
-    const DetailPenyewaanSnoreklingparagraf14 = ``
+    const [startDate, setStartDate] = useState('');
+    const [endDate, setEndDate] = useState('');
+    const handleChangeStartDate = (event) => {
+            setStartDate(event.target.value);
+    };
+    const handleChangeEndDate = (event) => {
+            setEndDate(event.target.value);
+    };
+    const calculateRentDays = () => {
+        const start = new Date(startDate);
+        const end = new Date(endDate);
+        const timeDiff = Math.abs(end.getTime() - start.getTime());
+        const rentDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+        return rentDays;
+    };
+
+    let {DetailPenyewaanID} = useParams();
+    const detpen = DetPen.useState(s => s.detpen)
+    const filterData = detpen.filter((item) => item.id == DetailPenyewaanID);
+    const DetailPenyewaan = filterData[0]
 
     return (
         <div>
-            <HeaderDetail judul={'Detail Penyewaan'} link={"/Penyewaan/"}/>
-            <div>
-                <p className='text-center md:text-5xl text-xl font-cde font-bold md:p-5 p-0 md:mt-0 mt-3'>
-                Alat Snorekling
-                </p>
-            </div>
+            <HeaderDetail judul={DetailPenyewaan.nama} link={"/Penyewaan"}/>
+            <Judul name={DetailPenyewaan.nama}/>
             <div className='flex justify-center items-center'>
                 <div className='w-screen max-w-7xl px-2 py-4'>
                     <div className=" w-full items-center justify-center border-solid border-4 border-blue-500 rounded-3xl">            
-                        <img src={snorekling} alt="" className='w-screen md:h-128 rounded-2xl ' />
+                        <img src={DetailPenyewaan.image} alt="" className='w-screen md:h-130 rounded-2xl ' />
                     </div>
                 </div>
             </div>
             <div className='flex justify-center items-center px-3 mb-20'>
-                <div className='w-screen md:px-5'>
+                <div className='w-screen md:px-5 text-justify font-cde'>
                     <p className='text-justify font-cde'>
-                        <h2>Deskripsi</h2>
+                        <h2>{DetailPenyewaan.detail}</h2>
                         <br></br>
-                        {DetailPenyewaanSnoreklingparagraf1}
+                        {DetailPenyewaan.p1}
                         <br></br>
-                        {DetailPenyewaanSnoreklingparagraf2}
+                        {DetailPenyewaan.p2}
                         <br></br>
-                        <h2 className='mt-3'>Informasi Fasilitas</h2>
+                        {DetailPenyewaan.p3}
                         <br></br>
-                        <h3 className='font-bold'>1. Snorkel</h3>
-                        {DetailPenyewaanSnoreklingparagraf3}
+                        {DetailPenyewaan.p4}
                         <br></br>
-                        <h3 className='font-bold'>2. Kaki Katak (Fins/Flipper)</h3>
-                        {DetailPenyewaanSnoreklingparagraf4}
+                        {DetailPenyewaan.p5}
                         <br></br>
-                        <h3 className='font-bold'>3. Masker Selam</h3>
-                        {DetailPenyewaanSnoreklingparagraf5}
+                        {DetailPenyewaan.p6}
                         <br></br>
-                        <h3 className='font-bold'>4. Pelampung Tubuh (Body Float)</h3>
-                        {DetailPenyewaanSnoreklingparagraf6}
+                        {DetailPenyewaan.p7}
                         <br></br>
-                        <h2 className='mt-3'>Syarat Dan Ketentuan</h2>
+                        {DetailPenyewaan.p8}
                         <br></br>
-                        {DetailPenyewaanSnoreklingparagraf7}
+                        {DetailPenyewaan.p9}
                         <br></br>
-                        {DetailPenyewaanSnoreklingparagraf8}
+                        {DetailPenyewaan.p10}
+                        <br></br>
+                        <h2>{DetailPenyewaan.informasi}</h2>
+                        <br></br>
+                        {DetailPenyewaan.p11}
+                        <br></br>
+                        {DetailPenyewaan.p12}
+                        <br></br>
+                        {DetailPenyewaan.p13}
+                        <br></br>
+                        {DetailPenyewaan.p14}
+                        <br></br>
+                        {DetailPenyewaan.p15}
+                        <br></br>
+                        {DetailPenyewaan.p16}
+                        <br></br>
+                        {DetailPenyewaan.p17}
+                        <br></br>
+                        {DetailPenyewaan.p18}
+                        <br></br>
+                        {DetailPenyewaan.p19}
+                        <br></br>
+                        {DetailPenyewaan.p20}
+                        <br></br>
+                        <h2>{DetailPenyewaan.syarat}</h2>
+                        <br></br>
+                        {DetailPenyewaan.p21}
+                        <br></br>
+                        {DetailPenyewaan.p22}
+                        <br></br>
+                        {DetailPenyewaan.p23}
+                        <br></br>
+                        {DetailPenyewaan.p24}
+                        <br></br>
+                        {DetailPenyewaan.p25}
+                        <br></br>
+                        {DetailPenyewaan.p26}
+                        <br></br>
+                        {DetailPenyewaan.p27}
+                        <br></br>
+                        {DetailPenyewaan.p28}
+                        <br></br>
+                        {DetailPenyewaan.p29}
+                        <br></br>
+                        {DetailPenyewaan.p30}
+                        <br></br>
                     </p>
+                    <div className=''>
+                        <h2>Pilih Waktu Waktu Penyewaan</h2>
+                        <p>Tanggal Mulai</p>
+                            <div className='p-3'>
+                                <input type="date" value={startDate} onChange={handleChangeStartDate} />
+                            </div>
+                        <p>Tanggal Selesai</p>
+                            <div className='p-3'>
+                                <input type="date" value={endDate} onChange={handleChangeEndDate} />
+                            </div>
+                        <div className='flex justify-center items-center'>
+                        {startDate && endDate && (
+                            <div className='border-2 border-indigo-600 w-fit rounded-xl'>
+                                <div className='p-5 justify-center items-center'>
+                                    <h2 className='text-base text-center'>Nota Penyewaan {DetailPenyewaan.nama}: </h2>
+                                        <div className='text-justify p-5'>
+                                        <p> Nama Penyewa :</p>
+                                        <p>Jumlah Hari Sewa : {calculateRentDays()} hari</p>
+                                        <p> Harga : Rp.{calculateRentDays()* DetailPenyewaan.harga_sewa} </p>
+                                        </div>
+                                    <p className='font-semibold'>Note: Perlihatkan Kepada Petugas Saat Mau Masuk</p>
+                                        <div className="flex justify-center items-center w-full mt-5">
+                                            <button type="button" className="w-fit inline-flex flex-col items-center justify-center px-5 border-gray-200 border-x bg-blue-700 bg-opacity-30 hover:bg-gray-50 dark:hover:bg-gray-800 group dark:border-gray-600 rounded-xl text-black font-cde md:text-4xl text-base">
+                                            Bayar Sekarang Rp.{calculateRentDays()* DetailPenyewaan.harga_sewa}
+                                            </button>
+                                        </div>
+                                </div>
+                            </div>
+                        )}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

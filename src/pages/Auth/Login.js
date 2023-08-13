@@ -59,6 +59,7 @@ const Login= () => {
       </div>
 
       <div className='bg-gray-100 flex flex-col justify-center'>
+        <ToastContainer autoClose={5000} />
         <form className='max-w-[400px] w-full mx-auto bg-cyan-900 p-8 px-8 rounded-lg' onSubmit={handleSubmitAuth}>
           <h2 className='text-4xl text-cyan-200 font-bold text-center'>SIGN IN</h2>
           <div className='flex flex-col text-gray-200 py-2'>

@@ -1,5 +1,6 @@
 import { Store } from "pullstate";
 import { loginAPI } from "../api/APIauth";
+import imgmakanan from '../assets/makanan.png'
 
 // deklarasi State Data User
 export const UserState = new Store({

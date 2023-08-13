@@ -14,7 +14,7 @@ const SyaratDanKetentuan = () => {
                                 <input type="checkbox"  className="mr-2 ml-2"/>
                                     Jumlah orang berkunjung minimal 5 orang, maksimal 10 orang. Jika kurang dari 5 orang atau lebih dari 10 tuliskan di kolom ini
                                 <div className="relative w-36 h-fit flex">
-                                    <input type="text" id="floating_filled" className=" rounded-lg p-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder ="Jumlah Orang" />
+                                    <input type="text" id="floating_filled" className=" rounded-lg p-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder ="Jumlah Orang" />
                                     <h1 className='p-3 font-cde md:text-lg text-sm'>Orang</h1>
                                 </div>
                             </label>
@@ -22,9 +22,9 @@ const SyaratDanKetentuan = () => {
                                 <input type="checkbox"  className="mr-2 ml-2 mt-5"/>
                                     Jika anda membawa anak silahkan tuliskan jumlah dan usia anak anda
                                 <div className="relative w-68 h-fit flex">
-                                    <input type="text" id="floating_filled" className=" rounded-lg p-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder ="Jumlah Anak" />
+                                    <input type="text" id="floating_filled" className=" rounded-lg p-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder ="Jumlah Anak" />
                                     <h1 className='p-3 font-cde md:text-lg text-sm'>Anak</h1>
-                                    <input type="text" id="floating_filled" className=" rounded-lg p-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder ="Usia" />
+                                    <input type="text" id="floating_filled" className=" rounded-lg p-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder ="Usia" />
                                     <h1 className='p-3 font-cde md:text-lg text-sm'>Anak</h1>
                                 </div>
                             </label>
@@ -32,9 +32,9 @@ const SyaratDanKetentuan = () => {
                                 <input type="checkbox"  className="mr-2 ml-2 mt-5" />
                                     Jika ada pengunjung berusia lanjut silahkan tuliskan jumlah dan usia pengunjung
                                 <div className="relative w-72 h-fit flex">
-                                    <input type="text" id="floating_filled" className=" rounded-lg p-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder ="Jumlah Orang" />
+                                    <input type="text" id="floating_filled" className=" rounded-lg p-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder ="Jumlah Orang" />
                                     <h1 className='p-3 font-cde md:text-lg text-sm'>Orang</h1>
-                                    <input type="text" id="floating_filled" className=" rounded-lg p-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder ="Usia" />
+                                    <input type="text" id="floating_filled" className=" rounded-lg p-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder ="Usia" />
                                     <h1 className='p-3 font-cde md:text-lg text-sm'>Tahun</h1>
                                 </div>
                             </label>

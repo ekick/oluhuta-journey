@@ -50,5 +50,23 @@ carousel-root {
       width: 95%;
     }
   }
+
+  .responsive-text {
+    font-size: 16px; /* Ukuran teks default */
+  }
+  
+  /* Media query untuk layar kecil (misalnya max-width 768px) */
+  @media (max-width: 768px) {
+    .responsive-text {
+      font-size: 14px; /* Ukuran teks untuk layar kecil */
+    }
+  }
+  
+  /* Media query untuk layar sangat kecil (misalnya max-width 480px) */
+  @media (max-width: 480px) {
+    .responsive-text {
+      font-size: 12px; /* Ukuran teks untuk layar sangat kecil */
+    }
+  }
   
   

@@ -84,7 +84,7 @@ const Sidebar = ({ setOpenSidebar, mediaScreen, openSidebar }) => {
                </div>
                   <ul className='whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1 font-medium overflow-x-hidden'>
                      <li>
-                        <NavLink to="/pages/culturdiversity" className={"link1 mb-1"}>
+                        <NavLink to="/pages/culturdiversity" className={"link mb-1"}>
                            <GiIsland size={23} className='min-w-max'/>
                            Spot Wisata
                         </NavLink>
@@ -111,7 +111,7 @@ const Sidebar = ({ setOpenSidebar, mediaScreen, openSidebar }) => {
                      </li>
                      
                      <li>
-                        <NavLink to="/pages/toko" className={"mb-1 link1"}>
+                        <NavLink to="/pages/toko" className={"mb-1 link"}>
                            <AiTwotoneShop size={23} className='min-w-max'/>
                            UMKM
                         </NavLink>
@@ -131,25 +131,25 @@ const Sidebar = ({ setOpenSidebar, mediaScreen, openSidebar }) => {
                         </ul>
                      </li>
                      <li>
-                        <NavLink to="/pages/pemandu" className={"mb-1 link1 "}>
+                        <NavLink to="/pages/pemandu" className={"mb-1 link "}>
                            <IoIosPerson size={23} className='min-w-max'/>
                            Pemandu
                         </NavLink>
                      </li>
                      <li>
-                        <NavLink to="/pages/laporan" className={"mb-1 link1 "}>
+                        <NavLink to="/pages/laporan" className={"mb-1 link "}>
                            <BiSolidReport size={23} className='min-w-max'/>
                            Laporan
                         </NavLink>
                      </li>
                      <li>
-                        <NavLink to="/pages/monitoring" className={"mb-1 link1 "}>
+                        <NavLink to="/pages/monitoring" className={"mb-1 link "}>
                            <TbHeartRateMonitor size={23} className='min-w-max'/>
                            Monitoring
                         </NavLink>
                      </li>
                      <li className="border-t border-slate-300 pt-3">
-                        <NavLink to="/pages/profile" className={"link1"}>
+                        <NavLink to="/pages/profile" className={"link"}>
                            <BiSolidUserCircle size={23} className='min-w-max'/>
                            Akun
                         </NavLink>
