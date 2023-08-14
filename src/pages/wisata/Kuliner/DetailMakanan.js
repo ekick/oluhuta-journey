@@ -5,7 +5,7 @@ import HeaderDetail from '../../../components/wisata/HeaderDetail'
 import { useParams } from 'react-router-dom'
 import { Makanan1 } from '../../../hooks/StateWisata'
 
-const DetailMakanan = ( ) => {    
+function DetailMakanan() {    
     let {DetailMakananID} = useParams();
     const datamakanan = Makanan1.useState(s => s.makanan)
     const filterData = datamakanan.filter((item) => item.id == DetailMakananID);

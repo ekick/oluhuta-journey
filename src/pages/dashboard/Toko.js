@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react';
+import ImageUpload from '../../components/dashboard/ImageUpload';
 
 const Toko = () => {
+    const defaultUrl = 'https://fakeimg.pl/350x200/';     
+    const [image,setImage] = useState(defaultUrl);
+    const [imageQR,setImageQR] = useState(defaultUrl);
+    const [saveImage, setSaveImage] = useState(null);
+    const [saveImageQR, setSaveImageQR] = useState(null);
+
   return (
     <div class={`p-4 sm:ml-64 `}>
         <h1 className='pl-4 text-xl'><b>Toko</b></h1>
@@ -21,10 +28,14 @@ const Toko = () => {
                         
                     </div>
                     <div className="grid gap-6 mb-6">
-                        <div>
-                            <label for="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Gambar Toko</label>
-                            <input type="file" className=" text-sm rounded-lg block w-full p-2.5 dark:bg-gray-300 dark:placeholder-black dark:text-gray-700 dark:focus:ring-blue-500 dark:border-gray-600 dark:focus:border-blue-500" required></input>
-                        </div>
+                        <label htmlFor="first_name" className="block text-sm font-medium text-gray-900 dark:text-black">Gambar Toko</label>
+                        <div className='d-flex justify-content-center align-items-center'>
+                            <ImageUpload
+                            image={image}
+                            setImage={setImage}
+                            setSaveImage={setSaveImage}
+                            />
+                        </div> 
                     </div>
                     <div>
                         <label for="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Keterangan</label>

@@ -1,18 +1,27 @@
 import React from 'react'
-import BG from "../../assets/bg-oluhuta.png"; 
-import { useNavigate } from 'react-router-dom';
+import BG from "../../assets/bg-oluhuta.png";
 import { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { updateUser, UserState } from '../../hooks/StateAuth';
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const Login= () => {
   const userData = UserState.useState((s) => s.user)
+  const location = useLocation().pathname;
+  const navigate = useNavigate()
 
   const [valueInput, setValueInput] = useState({
     username: "",
     password: ""
   })
-  const navigate = useNavigate()
+
+  const handleSubmit = () => {
+    if (location == "/Login") {
+      navigate("/PemanduWisata")
+    } else if (location == "/admin/login") {
+      navigate("/pages/culturdiversity")
+    }
+  }
 
   const toastNotify = (message) => toast(message)
 
@@ -85,7 +94,7 @@ const Login= () => {
                 Registrasi
             </a>
           </div>
-          <button type='submit' className='w-full my-5 py-2 bg-blue-500 text-white'>Masuk</button>
+          <button type='button' onClick={handleSubmit} className='w-full my-5 py-2 bg-blue-500 text-white'>Masuk</button>
         </form>
       </div>
 

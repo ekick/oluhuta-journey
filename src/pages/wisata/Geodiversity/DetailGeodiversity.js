@@ -24,35 +24,6 @@ const DetailGeodiversity = () => {
                 <div className='w-screen md:px-5'>
                     <p className='text-justify font-cde'>
                         {GeoDetail.p1}
-                        <br></br>
-                        {GeoDetail.p2}
-                        <br></br>
-                        {GeoDetail.p3}
-                        <br></br>
-                        {GeoDetail.p4}
-                        <br></br>
-                        {GeoDetail.p5}
-                        <br></br>
-                        {GeoDetail.p6}
-                        <br></br>
-                        {GeoDetail.p7}
-                        <br></br>
-                        {GeoDetail.p8}
-                        <br></br>
-                        {GeoDetail.p9}
-                        <br></br>
-                        {GeoDetail.p10}
-                        <br></br>
-                        {GeoDetail.p11}
-                        <br></br>
-                        {GeoDetail.p12}
-                        <br></br>
-                        {GeoDetail.p13}
-                        <br></br>
-                        {GeoDetail.p14}
-                        <br></br>
-                        {GeoDetail.p15}
-                        <br></br>
                     </p>
                 </div>
             </div>

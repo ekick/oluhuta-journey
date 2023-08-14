@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
 import HeaderDetail from '../../../components/wisata/HeaderDetail'
+import HeaderModal from '../../../components/wisata/HeaderModal';
 import { useParams } from 'react-router-dom'
 import { DetPen } from '../../../hooks/StateWisata'
 import Judul from '../../../components/wisata/Judul'
 import 'react-datepicker/dist/react-datepicker.css';
 
 const DetailPenyewaan = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+    setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+    setIsModalOpen(false);
+    };
 
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
@@ -44,73 +55,19 @@ const DetailPenyewaan = () => {
                     <p className='text-justify font-cde'>
                         <h2>{DetailPenyewaan.detail}</h2>
                         <br></br>
-                        {DetailPenyewaan.p1}
-                        <br></br>
-                        {DetailPenyewaan.p2}
-                        <br></br>
-                        {DetailPenyewaan.p3}
-                        <br></br>
-                        {DetailPenyewaan.p4}
-                        <br></br>
-                        {DetailPenyewaan.p5}
-                        <br></br>
-                        {DetailPenyewaan.p6}
-                        <br></br>
-                        {DetailPenyewaan.p7}
-                        <br></br>
-                        {DetailPenyewaan.p8}
-                        <br></br>
-                        {DetailPenyewaan.p9}
-                        <br></br>
-                        {DetailPenyewaan.p10}
+                        {DetailPenyewaan.pd}
                         <br></br>
                         <h2>{DetailPenyewaan.informasi}</h2>
                         <br></br>
-                        {DetailPenyewaan.p11}
-                        <br></br>
-                        {DetailPenyewaan.p12}
-                        <br></br>
-                        {DetailPenyewaan.p13}
-                        <br></br>
-                        {DetailPenyewaan.p14}
-                        <br></br>
-                        {DetailPenyewaan.p15}
-                        <br></br>
-                        {DetailPenyewaan.p16}
-                        <br></br>
-                        {DetailPenyewaan.p17}
-                        <br></br>
-                        {DetailPenyewaan.p18}
-                        <br></br>
-                        {DetailPenyewaan.p19}
-                        <br></br>
-                        {DetailPenyewaan.p20}
+                        {DetailPenyewaan.pi}
                         <br></br>
                         <h2>{DetailPenyewaan.syarat}</h2>
                         <br></br>
-                        {DetailPenyewaan.p21}
-                        <br></br>
-                        {DetailPenyewaan.p22}
-                        <br></br>
-                        {DetailPenyewaan.p23}
-                        <br></br>
-                        {DetailPenyewaan.p24}
-                        <br></br>
-                        {DetailPenyewaan.p25}
-                        <br></br>
-                        {DetailPenyewaan.p26}
-                        <br></br>
-                        {DetailPenyewaan.p27}
-                        <br></br>
-                        {DetailPenyewaan.p28}
-                        <br></br>
-                        {DetailPenyewaan.p29}
-                        <br></br>
-                        {DetailPenyewaan.p30}
+                        {DetailPenyewaan.ps}
                         <br></br>
                     </p>
                     <div className=''>
-                        <h2>Pilih Waktu Waktu Penyewaan</h2>
+                        <h2 className='mb-5'>Pilih Waktu Waktu Penyewaan</h2>
                         <p>Tanggal Mulai</p>
                             <div className='p-3'>
                                 <input type="date" value={startDate} onChange={handleChangeStartDate} />
@@ -119,25 +76,44 @@ const DetailPenyewaan = () => {
                             <div className='p-3'>
                                 <input type="date" value={endDate} onChange={handleChangeEndDate} />
                             </div>
-                        <div className='flex justify-center items-center'>
-                        {startDate && endDate && (
-                            <div className='border-2 border-indigo-600 w-fit rounded-xl'>
-                                <div className='p-5 justify-center items-center'>
-                                    <h2 className='text-base text-center'>Nota Penyewaan {DetailPenyewaan.nama}: </h2>
-                                        <div className='text-justify p-5'>
-                                        <p> Nama Penyewa :</p>
-                                        <p>Jumlah Hari Sewa : {calculateRentDays()} hari</p>
-                                        <p> Harga : Rp.{calculateRentDays()* DetailPenyewaan.harga_sewa} </p>
+                                <div className='flex justify-center items-center'>
+                                {startDate && endDate && (
+                                    <div className='border-2 border-indigo-600 w-fit rounded-xl'>
+                                        <div className='p-5 justify-center items-center'>
+                                            <h2 className='text-base text-center'>Nota Penyewaan {DetailPenyewaan.nama}: </h2>
+                                            <div className='text-justify p-5'>
+                                                <p> Nama Penyewa :</p>
+                                                <p>Jumlah Hari Sewa : {calculateRentDays()} hari</p>
+                                                <p> Harga : Rp.{calculateRentDays()* DetailPenyewaan.harga_sewa} </p>
+                                            </div>
+                                            <p className='font-semibold text-center'>Note: Perlihatkan Kepada Petugas Saat Mau Masuk</p>
+                                            <div className="flex justify-center items-center w-full mt-5">
+                                                <button onClick={openModal} type="button" className="w-fit inline-flex flex-col items-center justify-center px-5 border-gray-200 border-x bg-blue-700 bg-opacity-30 hover:bg-gray-50 dark:hover:bg-gray-800 group dark:border-gray-600 rounded-xl text-black font-cde md:text-4xl text-base">
+                                                Bayar Sekarang Rp.{calculateRentDays()* DetailPenyewaan.harga_sewa}
+                                                </button>
+                                                {isModalOpen && (
+                                                    <div style={{padding: '10px', position: 'fixed',top: '0',left: '0', width: '100%', height: '100%', background: 'rgba(0, 0, 0, 0.5)', display: 'flex', justifyContent: 'center',alignItems: 'center',}} >
+                                                        <div style={{ background: 'white', padding: '10px', borderRadius: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)',}}>
+                                                        <HeaderModal judul={DetailPenyewaan.nama}/>
+                                                            <div className='p-5'>
+                                                                <h2>Yakin Ingin Melanjutkan Transaksi Ini !</h2>
+                                                                <p>Alamat :</p>
+                                                                <p>No. WhatsApp :</p>
+                                                                <p>Total Pembayaran : Rp.{calculateRentDays()* DetailPenyewaan.harga_sewa} </p>
+                                                            </div>
+                                                        <div className='w-full flex justify-center items-center space-x-5'>
+                                                        <button className='rounded-xl' onClick={closeModal}>Kembali</button>
+                                                        <button className='rounded-xl'>Lanjut WA</button>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                )}
+                                            </div>
                                         </div>
-                                    <p className='font-semibold'>Note: Perlihatkan Kepada Petugas Saat Mau Masuk</p>
-                                        <div className="flex justify-center items-center w-full mt-5">
-                                            <button type="button" className="w-fit inline-flex flex-col items-center justify-center px-5 border-gray-200 border-x bg-blue-700 bg-opacity-30 hover:bg-gray-50 dark:hover:bg-gray-800 group dark:border-gray-600 rounded-xl text-black font-cde md:text-4xl text-base">
-                                            Bayar Sekarang Rp.{calculateRentDays()* DetailPenyewaan.harga_sewa}
-                                            </button>
-                                        </div>
+                                    </div>
+                                )}
                                 </div>
-                            </div>
-                        )}
+                            <div>
                         </div>
                     </div>
                 </div>

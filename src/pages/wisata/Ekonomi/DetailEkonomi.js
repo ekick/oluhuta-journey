@@ -25,37 +25,6 @@ const DetailEkonomi = () => {
                 <div className='w-screen md:px-5'>
                     <p className='text-justify font-cde'>
                         {EkoDetail.p1}
-                        <br></br>
-                        {EkoDetail.p2}
-                        <br></br>
-                        {EkoDetail.p3}
-                        <br></br>
-                        {EkoDetail.p4}
-                        <br></br>
-                        {EkoDetail.p5}
-                        <br></br>
-                        {EkoDetail.p6}
-                        <br></br>
-                        {EkoDetail.p7}
-                        <br></br>
-                        {EkoDetail.p8}
-                        <br></br>
-                        {EkoDetail.p9}
-                        <br></br>
-                        {EkoDetail.p10}
-                        <br></br>
-                        {EkoDetail.p11}
-                        <br></br>
-                        {EkoDetail.p12}
-                        <br></br>
-                        {EkoDetail.p13}
-                        <br></br>
-                        {EkoDetail.p14}
-                        <br></br>
-                        {EkoDetail.p15}
-                        <br></br>
-                        {EkoDetail.p16}
-                        <br></br>
                     </p>
                 </div>
             </div>
