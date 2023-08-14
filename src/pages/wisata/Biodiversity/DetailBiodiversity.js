@@ -25,35 +25,6 @@ const DetailBiodiversity = () => {
                 <div className='w-screen md:px-5'>
                     <p className='text-justify font-cde'>
                         {BioDetail.p1}
-                        <br></br>
-                        {BioDetail.p2}
-                        <br></br>
-                        {BioDetail.p3}
-                        <br></br>
-                        {BioDetail.p4}
-                        <br></br>
-                        {BioDetail.p5}
-                        <br></br>
-                        {BioDetail.p6}
-                        <br></br>
-                        {BioDetail.p7}
-                        <br></br>
-                        {BioDetail.p8}
-                        <br></br>
-                        {BioDetail.p9}
-                        <br></br>
-                        {BioDetail.p10}
-                        <br></br>
-                        {BioDetail.p11}
-                        <br></br>
-                        {BioDetail.p12}
-                        <br></br>
-                        {BioDetail.p13}
-                        <br></br>
-                        {BioDetail.p14}
-                        <br></br>
-                        {BioDetail.p15}
-                        <br></br>
                     </p>
                 </div>
             </div>
