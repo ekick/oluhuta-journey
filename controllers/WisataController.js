@@ -1,4 +1,4 @@
-import SpotWisata from "../models/SpotWisata.js"
+// import SpotWisata from "../models/SpotWisata.js"
 import Produk from "../models/Produk.js"
 import Biodata from "../models/Biodata.js"
 import Kunjungan from "../models/Kunjungan.js"
@@ -22,11 +22,15 @@ class WisataController {
       })
       if (!form) { throw { code: 500, message: 'FORM_KUNJUNGAN_CREATE_FAILED' } }
 
+      const data = {
+        pesan: `Berhasil menyimpan data kunjungan!`
+      }
+
       return res.status(200)
                 .json({
                   status: true,
                   message: "FORM_CREATE_SUCCESS",
-                  form,
+                  data,
                 })
     } catch (error) {
       return res.status(error.code || 500)
@@ -39,8 +43,12 @@ class WisataController {
 
   async ListProduk(req, res) {
     try {
-      const produk = await Produk.find({}).populate('Toko')
+      const produk = await Produk.find({}).populate('Toko', 'nama')
       if (!produk) { throw { code: 404, message: "PRODUK_DATA_NOT_FOUND" } }
+
+      const data = {
+        produk
+      }
 
       return res.status(200)
                 .json({
@@ -213,11 +221,21 @@ class WisataController {
         token: generateToken,
       })
 
+      const data = {
+        id : form._id,
+        jumlah : form.jumlah,
+        waktu_sewa : form.waktuSewa,
+        jangka_sewa : form.jangkaSewa,
+        token : form.token,
+        created_at : form.createdAt,
+        update_at : form.updatedAt
+      }
+
       return res.status(200)
                 .json({
                   status: true,
                   message: "FORM_CREATE_SUCCESS",
-                  form,
+                  data,
                 })
     } catch (error) {
       return res.status(error.code || 500)

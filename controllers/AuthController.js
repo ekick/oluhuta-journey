@@ -53,8 +53,6 @@ class AuthController {
                   .json({
                       status: true,
                       message: 'USER_REGISTER_SUCCESS',
-                      user,
-                      biodata
                     })
     } catch (error) {
       return res.status(error.code || 500)
@@ -84,15 +82,19 @@ class AuthController {
       const accessToken = await generateAksesToken(payload);
       const refreshToken = await generateRefreshToken(payload);
 
+      const data = {
+        username: user.username,
+        nama: biodata.nama,
+        no_hp: biodata.nomorHP,
+        accessToken,
+        refreshToken
+      }
+
       return res.status(200)
                   .json({
                     status: true,
                     message: "USER_LOGIN_SUCCESS",
-                    username: user.username,
-                    nama: biodata.nama,
-                    no_hp: biodata.nomorHP,
-                    accessToken,
-                    refreshToken
+                    data
                   })
     } catch (error) {
       return res.status(error.code || 500)
@@ -113,12 +115,16 @@ class AuthController {
       const accessToken = await generateAksesToken(payload);
       const refreshToken = await generateRefreshToken(payload);
 
+      const data = {
+        accessToken,
+        refreshToken
+      }
+
       return res.status(200)
                   .json({
                     status: true,
                     message: "REFRESH_TOKEN_SUCCESS",
-                    accessToken,
-                    refreshToken
+                    data
                   })
 
     }catch (error) {

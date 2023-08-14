@@ -37,4 +37,4 @@ const Schema = new mongoose.Schema({
 }
 )
 
-export default mongoose.model('Toko', Schema)
+export default mongoose.model('Produk', Schema)
