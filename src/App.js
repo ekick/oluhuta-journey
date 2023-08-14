@@ -29,6 +29,9 @@ import DetailMinuman from './pages/wisata/Kuliner/DetailMinuman';
 import ProfileWisata from './pages/wisata/ProfileWisata';
 import Ekonomi from './pages/wisata/Ekonomi';
 import DetailEkonomi from './pages/wisata/Ekonomi/DetailEkonomi';
+import Pembelian from './pages/wisata/Pembelian';
+import ListSpot from './pages/wisata/ListSpot';
+import DeskripsiSpot from './pages/wisata/DeskripsiSpot';
 
 // dashboard pages import
 import Geologi from "./pages/dashboard/Geologi";
@@ -61,8 +64,13 @@ const App = () => {
   return (
     <BrowserRouter>
         <Routes>
+          <Route path="/ListSpot/:KategoriSpotID" element={<ListSpot />}/>
+          <Route path="/DeskripsiSpot/:KategoriSpotID/:SpotID" exact element={<DeskripsiSpot />}/>
+          <Route path="/PemanduWisata" element={<PemanduWisata />}/>
+          <Route path="/" element={<Home />}/>
+          <Route path="/SyaratDanKetentuan" element={<SyaratDanKetentuan />}/>
+
           <Route element={<WisataLayout />} >
-            <Route path="/" element={<Home />}/>
             <Route path="/Beranda" element={<Beranda />}/>
             <Route path="/Biodiversity" element={<BiodiversityWisata />}/>
             <Route path="/Biodiversity/:DetailBiodiversityID" element={<DetailBiodiversity />}/>
@@ -78,11 +86,10 @@ const App = () => {
             <Route path="/Kuliner/Minuman/:DetailMinumanID" element={<DetailMinuman />}/>
             <Route path="/Penyewaan" element={<Penyewaan />}/>
             <Route path="/Penyewaan/:DetailPenyewaanID" element={<DetailPenyewaan />}/>
-            <Route path="/SyaratDanKetentuan" element={<SyaratDanKetentuan />}/>
-            <Route path="/PemanduWisata" element={<PemanduWisata />}/>
             <Route path="/Destinasi" element={<Destinasi />}/>
             <Route path="/Scan" element={<Scan />}/>
             <Route path="/ProfileWisata" element={<ProfileWisata/>}/>
+            <Route path="/ProfileWisata/Pembelian" element={<Pembelian />}/>
             <Route path="/Ekonomi" element={<Ekonomi/>}/>
             <Route path="/Ekonomi/:DetailEkonomiID" element={<DetailEkonomi/>}/>
             <Route path="/SpotWisata" element={<SpotWisata />}/>

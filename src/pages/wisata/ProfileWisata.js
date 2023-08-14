@@ -3,6 +3,7 @@ import logo from '../../assets/man.png'
 import buy from '../../assets/buy.png'
 import rent from '../../assets/rent.png'
 import lo from '../../assets/log.png'
+import { NavLink } from 'react-router-dom'
 import HeaderDetail from '../../components/wisata/HeaderDetail'
 
 
@@ -10,11 +11,11 @@ const ProfileWisata = () => {
   const items = [
     {id: 1, name: 'Your Email', image: logo, telp: 'Your Telp'},
   ];
-  const content = [
-    { id: 1, name: 'Pembelian', Image: buy},
-    { id: 2, name: 'Penyewaan', Image: rent},
-    { id: 3, name: 'Log Out', Image: lo},
-  ];
+  // const content = [
+  //   { id: 1, name: 'Pembelian', Image: buy,  path: '/ProfileWisata/Pembelian'},
+  //   { id: 2, name: 'Penyewaan', Image: rent, path: '/ProfileWisata/Pembelian'},
+  //   { id: 3, name: 'Log Out', Image: lo, path: '/ProfileWisata/Pembelian'},
+  // ];
   return (
     <div>
       <HeaderDetail judul={'Profil Pengguna'} link={"/Beranda"}/>
@@ -44,9 +45,10 @@ const ProfileWisata = () => {
                 )}
             )}
         </div>
-        {content.map((item) => {
+        {/* {content.map((item) => {
           return(
             <div className='flex py-10 px-5 '>
+              <NavLink to={item.path}>
               <div className="flex items-center space-x-4">
                 <div className="flex-shrink-0">
                   <img className="md:w-20 w-10 md:h-20 h-10" src={item.Image} alt="/" />
@@ -57,9 +59,10 @@ const ProfileWisata = () => {
                   </h1>
                 </div>
               </div>
+              </NavLink>
             </div>
           )}
-          )}
+          )} */}
     </div>
   )
 }

@@ -6,25 +6,25 @@ import logo from '../../assets/Logo.png'
 import geodiversity from '../../assets/Geodiversity.png'
 import biodiversity from '../../assets/Biodiveristy.png'
 import culturaldiversity from '../../assets/Culturardiveristy.png'
+import { SplashConfig } from "../../hooks/StateWisata";
 
 const Home = () => {
+  const loadSplash = SplashConfig.useState(s => s.loadSplash)
   const navButton = [
-    {id: 1, title: 'Geodiversity', path: '/Geodiversity', image: geodiversity},
-    {id: 2, title: 'Biodiversity', path: '/Biodiversity', image: biodiversity},
-    {id: 3, title: 'Culturaldiversity', path: '/Culturaldiversity', image: culturaldiversity},
+    {id: 1, title: 'Geodiversity', path: '/ListSpot/Geodiversity', image: geodiversity},
+    {id: 2, title: 'Biodiversity', path: '/ListSpot/Biodiversity', image: biodiversity},
+    {id: 3, title: 'Culturaldiversity', path: '/ListSpot/Culturaldiversity', image: culturaldiversity},
   ]
-    const [showSplash, setShowSplash] = useState(true);
-        useEffect(() => {
+    useEffect(() => {
       const timer = setTimeout(() => {
-        setShowSplash(false);
-      }, 5000);
-
-    return () => clearTimeout(timer);
-  }, []);
+        SplashConfig.update(s => {s.loadSplash = false})
+      }, 4000);
+      return () => clearTimeout(timer);
+  }, [loadSplash]);
 
   return (
     <>
-      {showSplash ? (
+      {loadSplash ? (
         <SplashScreen />
       ) : (
         <div>
@@ -67,7 +67,7 @@ const Home = () => {
               </div>
               </div>
               <div className="flex justify-center items-center w-screen md:mt-1 mt-20">
-                <NavLink to="/PemanduWisata">
+                <NavLink to="/Login">
                     <button type="button" className="w-full inline-flex flex-col items-center justify-center px-5 border-gray-200 border-x bg-blue-700 bg-opacity-30 hover:bg-gray-50 dark:hover:bg-gray-800 group dark:border-gray-600 rounded-xl text-black font-cde font-bold md:text-4xl text-xl">
                     Yuk Kita Mulai
                     </button>

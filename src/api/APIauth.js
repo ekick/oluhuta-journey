@@ -1,14 +1,14 @@
 import axios from "axios";
 
-export const loginAPI = async (user, pass) => {
+export const loginAPI = async ({ data }) => {
   let respon = null, isError = false;
 
   const options = {
     method: 'POST',
     url: `http://localhost:8000/login`,
     params: { 
-      username : user,
-      password : pass,
+      user : data.user,
+      password : data.pass,
      }, 
   };
   
@@ -29,15 +29,18 @@ export const loginAPI = async (user, pass) => {
 
 }
 
-export const registerAPI = async (user, pass) => {
+export const registerAPI = async ({ data }) => {
   let respon = null, isError = false;
 
   const options = {
     method: 'POST',
     url: `http://localhost:8000/register`,
     params: { 
-      username : user,
-      password : pass,
+      name : data.nama,
+      email : data.email,
+      nohp : data.nohp,
+      username : data.username,
+      password : data.password,
      }, 
   };
   

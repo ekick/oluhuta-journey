@@ -39,8 +39,11 @@ return (
                                         <img className="w-20 h-20 rounded-full" src={item.image} alt="/" />
                                     </div>
                                     <div className="flex-1 min-w-0">
-                                        <p className="text-sm font-medium text-black whitespace-nowrap">
+                                        <p className="text-sm font-bold text-black">
                                         {item.name}
+                                        </p>
+                                        <p className="text-xs font-medium font text-black">
+                                        {item.nama_warung}
                                         </p>
                                         <p className="text-sm text-black">
                                         {item.harga}

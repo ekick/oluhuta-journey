@@ -11,7 +11,7 @@ const DetailCulturardiversity = () => {
     const CulDetail = filterData[0]
     return (
         <div>
-            <HeaderDetail judul={CulDetail.title} link={"/Geodiversity"}/>
+            <HeaderDetail judul={CulDetail.title} link={"/Culturaldiversity"}/>
             <Judul name={CulDetail.title}/>
             <div className='flex justify-center items-center'>
                 <div className='w-screen max-w-7xl px-2 py-4'>
@@ -24,35 +24,6 @@ const DetailCulturardiversity = () => {
                 <div className='w-screen md:px-5'>
                     <p className='text-justify font-cde'>
                         {CulDetail.p1}
-                        <br></br>
-                        {CulDetail.p2}
-                        <br></br>
-                        {CulDetail.p3}
-                        <br></br>
-                        {CulDetail.p4}
-                        <br></br>
-                        {CulDetail.p5}
-                        <br></br>
-                        {CulDetail.p6}
-                        <br></br>
-                        {CulDetail.p7}
-                        <br></br>
-                        {CulDetail.p8}
-                        <br></br>
-                        {CulDetail.p9}
-                        <br></br>
-                        {CulDetail.p10}
-                        <br></br>
-                        {CulDetail.p11}
-                        <br></br>
-                        {CulDetail.p12}
-                        <br></br>
-                        {CulDetail.p13}
-                        <br></br>
-                        {CulDetail.p14}
-                        <br></br>
-                        {CulDetail.p15}
-                        <br></br>
                     </p>
                 </div>
             </div>
