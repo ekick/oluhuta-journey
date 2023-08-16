@@ -83,25 +83,25 @@ const Sidebar = ({ setOpenSidebar, mediaScreen, openSidebar }) => {
                   <span className="text-xl whitespace-pre px-2.5 text-[0.9rem]">Oluhuta Journey</span>
                </div>
                   <ul className='whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1 font-medium overflow-x-hidden'>
-                     <li>
-                        <NavLink to="/pages/culturdiversity" className={"link mb-1"}>
+                     <li className="li">
+                        <NavLink to="/pages/culturdiversity" className={"link activemenu mb-1"}>
                            <GiIsland size={23} className='min-w-max'/>
                            Spot Wisata
                         </NavLink>
                         <ul className="pl-2">
-                           <li>
+                           <li className="li">
                               <NavLink to="/pages/culturdiversity" className={"p-1.5 flex rounded-t-lg gap-6  items-center md:cursor-pointer cursor-default duration-300 font-medium subactive "}>
                                  <SiMobxstatetree size={23} className='min-w-max'/>
                                  Culturaldiversity
                               </NavLink>
                            </li>
-                           <li>
+                           <li className="li">
                               <NavLink to="/pages/biodiversity" className={"p-1.5 flex  gap-6 items-center md:cursor-pointer cursor-default duration-300 font-medium subactive "}>
                                  <GiForest size={23} className='min-w-max'/>
                                  Biodiversity
                               </NavLink>
                            </li>
-                           <li>
+                           <li className="li">
                               <NavLink to="/pages/geologi" className={"p-1.5 flex rounded-b-lg gap-6 items-center md:cursor-pointer cursor-default duration-300 font-medium subactive"}>
                                  <RiEarthLine size={23} className='min-w-max'/>
                                  Geodiversity
@@ -110,19 +110,19 @@ const Sidebar = ({ setOpenSidebar, mediaScreen, openSidebar }) => {
                         </ul>
                      </li>
                      
-                     <li>
+                     <li className="li">
                         <NavLink to="/pages/toko" className={"mb-1 link"}>
                            <AiTwotoneShop size={23} className='min-w-max'/>
                            UMKM
                         </NavLink>
                         <ul className="pl-2">
-                           <li>
+                           <li className="li">
                               <NavLink to="/pages/toko" className={"p-1.5 flex rounded-t-lg gap-6 items-center md:cursor-pointer cursor-default duration-300 font-medium subactive "}>
                                  <AiFillShop size={23} className='min-w-max'/>
                                  Toko
                               </NavLink>
                            </li>
-                           <li>
+                           <li className="li">
                               <NavLink to="/pages/produk" className={"p-1.5 flex rounded-b-lg gap-6 items-center md:cursor-pointer cursor-default duration-300 font-medium subactive"}>
                                  <MdProductionQuantityLimits size={23} className='min-w-max'/>
                                  Produk
@@ -130,25 +130,25 @@ const Sidebar = ({ setOpenSidebar, mediaScreen, openSidebar }) => {
                            </li>
                         </ul>
                      </li>
-                     <li>
+                     <li className="li">
                         <NavLink to="/pages/pemandu" className={"mb-1 link "}>
                            <IoIosPerson size={23} className='min-w-max'/>
                            Pemandu
                         </NavLink>
                      </li>
-                     <li>
+                     <li className="li">
                         <NavLink to="/pages/laporan" className={"mb-1 link "}>
                            <BiSolidReport size={23} className='min-w-max'/>
                            Laporan
                         </NavLink>
                      </li>
-                     <li>
+                     <li className="li">
                         <NavLink to="/pages/monitoring" className={"mb-1 link "}>
                            <TbHeartRateMonitor size={23} className='min-w-max'/>
                            Monitoring
                         </NavLink>
                      </li>
-                     <li className="border-t border-slate-300 pt-3">
+                     <li className="border-t border-slate-300 pt-3 li">
                         <NavLink to="/pages/profile" className={"link"}>
                            <BiSolidUserCircle size={23} className='min-w-max'/>
                            Akun
